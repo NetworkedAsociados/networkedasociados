@@ -167,13 +167,17 @@ def card(e, b, extra=''):
     sec = 'sec-fondeo' if e['tipo'] == 'fondeo' else 'sec-brokers'
     favor = ''.join(f'<li>{esc(x)}</li>' for x in e.get('favor', [])[:3])
     u = upd(e)
+    aff = ''
+    if e.get('afiliado'):
+        aff = (f'<a class="btn b-acc b-sm" href="{esc(e["afiliado"])}" rel="sponsored noopener" target="_blank" aria-label="{esc(e["afiliado_texto"])} (enlace de afiliado)">'
+               f'{"Abrir cuenta" if e["tipo"] == "broker" else "Registrarme"} <span class="aff-tag">afiliado</span></a>')
     return f'''<article class="card {sec} rv" data-tilt data-tipo="{e["tipo"]}" data-riesgo="{e["riesgo"]}">
-<div class="top"><div style="display:flex;gap:12px;align-items:center">{mono(e)}<div><div class="kind">{"Broker" if e["tipo"]=="broker" else "Empresa de fondeo"}</div><h3>{esc(e["nombre"])}</h3></div></div>{chip_riesgo(e)}</div>
-{stars(e.get("calificacion"))}
+<div class="top">{mono(e)}<div class="nm"><div class="kind">{"Broker" if e["tipo"]=="broker" else "Empresa de fondeo"}</div><h3>{esc(e["nombre"])}</h3></div></div>
+<div class="srow">{stars(e.get("calificacion"))}{chip_riesgo(e)}</div>
 <p class="sum">{esc(e["resumen"])}</p>
 <ul>{favor}</ul>{extra}
-<div class="actions"><a class="btn b-ghost b-sm" href="{b}{url_of(e["analisis"])}">Ver análisis completo</a>{aff_btn(e)}</div>
-<div class="meta">Estado: {esc(e["estado"])}{f" · Actualizado {fecha(u)}" if u else ""}</div>
+<div class="actions{" one" if not aff else ""}"><a class="btn b-ghost b-sm" href="{b}{url_of(e["analisis"])}">Ver análisis</a>{aff}</div>
+<div class="meta">{esc(e["estado"])}{f" · Actualizado {fecha(u)}" if u else ""}</div>
 </article>'''
 
 def alert(e, b):
@@ -374,7 +378,7 @@ def build():
 
 <section class="nx-wrap sec sec-brokers" style="padding-top:0">
 <div class="head"><div><span class="eyebrow">Selección</span><h2>Dónde opero hoy</h2><p class="lead">Resumen rápido. El análisis completo está en cada ficha.</p></div><a class="more" href="{b}brokers/">Ver todos</a></div>
-<div class="rail">{"".join(card(e, b) for e in brokers + fondeo)}</div></section>
+<div class="rail" data-rail>{"".join(card(e, b) for e in brokers + fondeo)}</div><p class="rail-hint" aria-hidden="true">Desliza para ver más →</p></section>
 
 <section class="nx-wrap sec sec-peligro" style="padding-top:0">
 <div class="head"><div><span class="eyebrow">Alertas recientes</span><h2>Antes de depositar, revisa esto</h2></div><a class="more" href="{b}zona-de-peligro/">Ir a la Zona de peligro</a></div>
