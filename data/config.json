@@ -1,0 +1,45 @@
+{
+ "marca": "NetworkedAsociados",
+ "eslogan": "Trabajando en ti para crecer juntos",
+ "dominio": "https://www.networkedasociados.com",
+ "autor": "John Hansen Silva Peña",
+ "redes": {
+  "youtube": "https://www.youtube.com/@NetworkedAsociados",
+  "tiktok": "https://www.tiktok.com/@networkedasociados",
+  "instagram": "https://www.instagram.com/networkedasociados/",
+  "facebook": "https://www.facebook.com/networkedasociadosoficial",
+  "linkedin": "https://www.linkedin.com/in/john-hansen-silva-pe%C3%B1a-2301657a/",
+  "canal_whatsapp": "https://whatsapp.com/channel/0029VaDNeC0DTkJzN8ltLT37",
+  "canal_telegram": "https://t.me/NetworkedAsociadosInfo",
+  "telegram_directo": "https://t.me/networkedasociados",
+  "whatsapp_directo": "https://wa.me/573102173493",
+  "podcast_playlist": "https://www.youtube.com/playlist?list=PL-W34dYjd4L405uW64W1xiG4LFG-HBS15"
+ },
+ "videos_destacados": [
+  {
+   "id": "j-rFe-a1y_0",
+   "titulo": "Weltrade: mi análisis"
+  },
+  {
+   "id": "Wy6mv1P7V2w",
+   "titulo": "Deriv: mi análisis"
+  },
+  {
+   "id": "Qg_FVmR6FA0",
+   "titulo": "The5ers: mi experiencia"
+  },
+  {
+   "id": "-VLxsdKth2g",
+   "titulo": "FX Live Capital: la experiencia completa"
+  },
+  {
+   "id": "_OFl26Eu-8o",
+   "titulo": "De qué trata mi libro"
+  },
+  {
+   "id": "j127EjCV0n4",
+   "titulo": "Equipo Bridge Markets"
+  }
+ ],
+ "_pendiente": "Completa linkedin si quieres mostrarlo. Revisa los títulos de videos_destacados: los escribí según la página donde aparece cada video."
+}

@@ -1,0 +1,257 @@
+<div id="nwk-wrap" style="font-family:'Poppins',Arial,Helvetica,sans-serif; color:#1f2937; line-height:1.7; max-width:1200px; margin:auto;">
+
+<style>
+  html{scroll-behavior:smooth;}
+  #nwk-wrap h1,#nwk-wrap h2,#nwk-wrap h3,#nwk-wrap h4{text-transform:none !important; letter-spacing:normal; margin:0;}
+  #nwk-wrap *{box-sizing:border-box;}
+
+  /* Reveal sutil */
+  .nwk-reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
+  .nwk-reveal.nwk-visible{opacity:1; transform:translateY(0);}
+
+  /* Nav flotante */
+  .nwk-nav{position:sticky; top:0; z-index:60; background:rgba(10,31,68,.94); border-radius:12px; margin-bottom:36px; padding:8px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;}
+  .nwk-navlink{color:#dbe4f5 !important; text-decoration:none; font-weight:700; font-size:14px; padding:10px 20px; border-radius:8px; transition:background .25s ease, color .25s ease;}
+  .nwk-navlink.active{background:#FFC107 !important; color:#0A1F44 !important;}
+
+  /* Grid y tarjeta estándar */
+  .nwk-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px;}
+  .nwk-card{background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:32px; transition:border-color .25s ease, box-shadow .25s ease;}
+  .nwk-card:hover{border-color:#0A1F44; box-shadow:0 8px 24px rgba(10,31,68,.08);}
+  .nwk-card-tags{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;}
+  .nwk-chip{font-size:12px; font-weight:700; padding:5px 12px; border-radius:20px; display:inline-block;}
+  .nwk-chip-broker{background:#eef2ff; color:#0A1F44 !important;}
+  .nwk-chip-fondeo{background:#f0fdf4; color:#065f46 !important;}
+  .nwk-chip-activo{background:#e0f2fe; color:#075985 !important;}
+  .nwk-chip-evaluacion{background:#fef3c7; color:#92400e !important;}
+  .nwk-chip-observacion{background:#fee2e2; color:#991b1b !important;}
+  .nwk-card-title{color:#0A1F44 !important; font-size:24px; font-weight:800; margin-bottom:6px !important;}
+  .nwk-card-sub{color:#6b7280 !important; font-size:14px; margin:0 0 12px;}
+  .nwk-card-desc{color:#374151 !important; margin:0 0 12px;}
+  .nwk-card-list{color:#374151 !important; padding-left:18px; margin:0 0 18px;}
+  .nwk-card-actions{display:flex; gap:10px; flex-wrap:wrap;}
+  .nwk-cta-primary{background:#0A1F44; color:#FFC107 !important; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:700; font-size:14px; transition:background .2s ease;}
+  .nwk-cta-primary:hover{background:#132a5c;}
+  .nwk-cta-secondary{background:#fff; color:#0A1F44 !important; border:1px solid #0A1F44; padding:11px 22px; border-radius:8px; text-decoration:none; font-weight:700; font-size:14px; display:inline-flex; align-items:center; gap:7px; transition:background .2s ease, color .2s ease;}
+  .nwk-cta-secondary:hover{background:#0A1F44; color:#FFC107 !important;}
+  .nwk-affiliate-note{font-size:12px; color:#9ca3af !important; margin-top:12px;}
+
+  .nwk-section-head{display:flex; align-items:center; gap:12px; margin-bottom:8px;}
+  .nwk-section-bar{width:5px; height:28px; background:#0A1F44; border-radius:4px; flex-shrink:0;}
+  .nwk-section-title{color:#0A1F44 !important; font-size:28px; font-weight:800;}
+  .nwk-section-sub{color:#6b7280 !important; margin:6px 0 28px 17px; max-width:620px;}
+
+  @media (max-width:640px){
+    .nwk-card{padding:24px;}
+    .nwk-section-title{font-size:24px !important;}
+  }
+</style>
+
+<!-- HERO -->
+<section style="background:#0A1F44; padding:64px 30px; border-radius:16px; color:#fff; text-align:center; margin-bottom:30px;">
+  <span style="display:inline-block; background:rgba(255,193,7,.15); border:1px solid #FFC107; color:#FFC107 !important; padding:7px 18px; border-radius:8px; font-size:13px; font-weight:700; margin-bottom:18px;">
+    BROKERS Y CUENTAS DE FONDEO
+  </span>
+  <h1 style="color:#fff !important; font-size:38px; font-weight:800; margin:0 0 14px !important;">
+    Información clara antes de decidir dónde operar
+  </h1>
+  <p style="color:#cfd8e3 !important; font-size:17px; max-width:680px; margin:0 auto;">
+    Opciones documentadas con el mismo criterio, sin promesas ni jerarquías impuestas por nosotros.
+  </p>
+</section>
+
+<!-- NAV -->
+<div class="nwk-nav">
+  <a href="#evaluamos" data-target="evaluamos" class="nwk-navlink">Cómo evaluamos</a>
+  <a href="#brokers" data-target="brokers" class="nwk-navlink">Brokers</a>
+  <a href="#fondeo" data-target="fondeo" class="nwk-navlink">Cuentas de Fondeo</a>
+</div>
+
+<!-- TRANSPARENCIA -->
+<section class="nwk-reveal" style="background:#fffbeb; border:1px solid #f59e0b; border-radius:14px; margin-bottom:50px; padding:26px 30px;">
+  <p style="margin:0; color:#78350f !important; font-size:14px;">
+    <strong>Transparencia:</strong> algunos enlaces incluyen códigos de afiliado. Si te registras con alguno, recibo un incentivo sin costo adicional para ti. Ninguna opción listada implica una garantía de resultados.
+  </p>
+</section>
+
+<!-- CÓMO EVALUAMOS -->
+<section id="evaluamos" style="scroll-margin-top:80px; margin-bottom:56px;">
+  <div class="nwk-reveal nwk-section-head">
+    <div class="nwk-section-bar"></div>
+    <h2 class="nwk-section-title">Cómo evaluamos</h2>
+  </div>
+  <p class="nwk-reveal nwk-section-sub">Esta metodología aplica por igual a brokers, cuentas de fondeo y cualquier proyecto que se agregue en el futuro. No asigna puntuaciones ni rankings.</p>
+
+  <div class="nwk-reveal nwk-grid" style="margin-bottom:24px;">
+    <div class="nwk-card"><h3 class="nwk-card-title" style="font-size:18px;">📅 Trayectoria</h3><p class="nwk-card-desc" style="margin:0;">Tiempo operando y presencia documentada en el tiempo.</p></div>
+    <div class="nwk-card"><h3 class="nwk-card-title" style="font-size:18px;">🔍 Transparencia operativa</h3><p class="nwk-card-desc" style="margin:0;">Claridad de reglas, condiciones y comunicación con el usuario.</p></div>
+    <div class="nwk-card"><h3 class="nwk-card-title" style="font-size:18px;">🧭 Experiencia documentada</h3><p class="nwk-card-desc" style="margin:0;">Lo observado directamente o reportado públicamente.</p></div>
+    <div class="nwk-card"><h3 class="nwk-card-title" style="font-size:18px;">🛠️ Soporte y condiciones</h3><p class="nwk-card-desc" style="margin:0;">Atención, procesos de retiro y disponibilidad de información.</p></div>
+  </div>
+
+  <div class="nwk-reveal" style="background:#f8fafc; border-radius:14px; padding:26px 30px;">
+    <p style="margin:0 0 10px; color:#0A1F44 !important; font-weight:700; font-size:14px;">Estados que verás en cada tarjeta:</p>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <span class="nwk-chip nwk-chip-activo">Activo — disponible y documentado</span>
+      <span class="nwk-chip nwk-chip-evaluacion">En evaluación — seguimiento en curso</span>
+      <span class="nwk-chip nwk-chip-observacion">En observación — requiere precaución</span>
+    </div>
+  </div>
+</section>
+
+<!-- BROKERS -->
+<section id="brokers" style="scroll-margin-top:80px; margin-bottom:56px;">
+  <div class="nwk-reveal nwk-section-head">
+    <div class="nwk-section-bar"></div>
+    <h2 class="nwk-section-title">Brokers</h2>
+  </div>
+  <p class="nwk-reveal nwk-section-sub">Opciones para operar en mercado real.</p>
+
+  <div class="nwk-reveal nwk-grid">
+
+    <div class="nwk-card">
+      <div class="nwk-card-tags">
+        <span class="nwk-chip nwk-chip-broker">📊 Broker</span>
+        <span class="nwk-chip nwk-chip-activo">Activo</span>
+      </div>
+      <h3 class="nwk-card-title">Deriv</h3>
+      <p class="nwk-card-sub"><strong>Nivel:</strong> Principiante · Intermedio · Avanzado</p>
+      <p class="nwk-card-desc">Mercados alternativos, flexibilidad y aprendizaje progresivo.</p>
+      <ul class="nwk-card-list"><li>Plataformas intuitivas</li><li>Depósitos accesibles</li><li>Psicotrading y disciplina</li></ul>
+      <div class="nwk-card-actions">
+        <a href="https://track.deriv.com/_kEBnBUb2MMOhWoqmOk2VLGNd7ZgqdRLk/1/" class="nwk-cta-primary">Crear cuenta</a>
+        <a href="https://www.networkedasociados.com/2026/01/deriv-45.html" class="nwk-cta-secondary">Ver análisis completo</a>
+      </div>
+      <p class="nwk-affiliate-note">Enlace de afiliado</p>
+    </div>
+
+    <div class="nwk-card">
+      <div class="nwk-card-tags">
+        <span class="nwk-chip nwk-chip-broker">📊 Broker</span>
+        <span class="nwk-chip nwk-chip-activo">Activo</span>
+      </div>
+      <h3 class="nwk-card-title">Weltrade</h3>
+      <p class="nwk-card-sub"><strong>Nivel:</strong> Principiante · Intermedio · Avanzado</p>
+      <p class="nwk-card-desc">Entorno profesional, estabilidad y estructura para copytrading.</p>
+      <ul class="nwk-card-list"><li>Plataformas estables</li><li>Excelente ejecución</li><li>Ideal para sistemas profesionales</li></ul>
+      <div class="nwk-card-actions">
+        <a href="https://secure.weltrade.com/login/registration?cxd=65455_474471" class="nwk-cta-primary">Crear cuenta</a>
+        <a href="https://www.networkedasociados.com/2026/04/copytrade.html" class="nwk-cta-secondary">Copytrading</a>
+        <a href="https://www.networkedasociados.com/2026/01/weltrade-broker.html" class="nwk-cta-secondary">Ver análisis completo</a>
+      </div>
+      <p class="nwk-affiliate-note">Enlace de afiliado</p>
+    </div>
+
+    <div class="nwk-card">
+      <div class="nwk-card-tags">
+        <span class="nwk-chip nwk-chip-broker">📊 Broker</span>
+        <span class="nwk-chip nwk-chip-observacion">En observación</span>
+      </div>
+      <h3 class="nwk-card-title">Bridge Market</h3>
+      <p class="nwk-card-sub"><strong>Seguimiento:</strong> documentación en curso</p>
+      <p class="nwk-card-desc">Marketing agresivo, condiciones internas poco claras y reportes de pagos retenidos en montos grandes.</p>
+      <ul class="nwk-card-list"><li>Índices propios</li><li>Reglas internas ocultas</li><li>Reportes de pagos retenidos</li></ul>
+      <div class="nwk-card-actions">
+        <a href="https://www.networkedasociados.com/2026/01/bridge-market.html" class="nwk-cta-secondary">Ver análisis completo</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CUENTAS DE FONDEO -->
+<section id="fondeo" style="scroll-margin-top:80px; margin-bottom:40px;">
+  <div class="nwk-reveal nwk-section-head">
+    <div class="nwk-section-bar"></div>
+    <h2 class="nwk-section-title">Cuentas de Fondeo</h2>
+  </div>
+  <p class="nwk-reveal nwk-section-sub">Seguimiento de empresas de fondeo, con la misma estructura que los brokers.</p>
+
+  <div class="nwk-reveal nwk-grid">
+
+    <div class="nwk-card">
+      <div class="nwk-card-tags">
+        <span class="nwk-chip nwk-chip-fondeo">🏦 Cuenta de Fondeo</span>
+        <span class="nwk-chip nwk-chip-activo">Activo</span>
+      </div>
+      <h3 class="nwk-card-title">The 5ers</h3>
+      <p class="nwk-card-sub"><strong>Nivel:</strong> Avanzado</p>
+      <p class="nwk-card-desc">Historial de pagos documentado, reglas claras y trayectoria reconocida en la industria.</p>
+      <div class="nwk-card-actions">
+        <a href="https://www.networkedasociados.com/2026/01/the5ers.html" class="nwk-cta-primary">Ver análisis completo</a>
+      </div>
+    </div>
+
+    <div class="nwk-card">
+      <div class="nwk-card-tags">
+        <span class="nwk-chip nwk-chip-fondeo">🏦 Cuenta de Fondeo</span>
+        <span class="nwk-chip nwk-chip-evaluacion">En evaluación</span>
+      </div>
+      <h3 class="nwk-card-title">Bridge ProFirm</h3>
+      <p class="nwk-card-sub"><strong>Seguimiento:</strong> activo</p>
+      <p class="nwk-card-desc">Documentando condiciones, soporte y experiencia operativa a medida que avanza el proceso de evaluación.</p>
+      <div class="nwk-card-actions">
+        <a href="https://www.networkedasociados.com/p/bridge-profirm.html" class="nwk-cta-primary">Ver seguimiento</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ADVERTENCIA -->
+<section class="nwk-reveal" style="background:#fff7ed; border:1px solid #f59e0b; padding:30px 32px; border-radius:14px; margin-bottom:24px;">
+  <h3 style="color:#92400e !important; margin-bottom:10px !important; font-size:17px;">Antes de aplicar a una cuenta de fondeo</h3>
+  <ul class="nwk-card-list" style="color:#78350f !important; margin:0;">
+    <li>Reglas estrictas y gestión de riesgo obligatoria</li>
+    <li>Control emocional constante</li>
+    <li>Capacidad de asumir pérdidas</li>
+    <li>El objetivo no es aprobar una prueba, sino generar resultados sostenibles</li>
+  </ul>
+</section>
+
+<!-- PRECAUCIÓN ADICIONAL -->
+<section class="nwk-reveal" style="background:#fef2f2; border-left:5px solid #dc2626; padding:28px 30px; border-radius:12px; margin-bottom:40px;">
+  <h3 style="color:#b91c1c !important; margin-bottom:8px !important; font-size:16px;">Precaución adicional</h3>
+  <p style="color:#7f1d1d !important; margin:0 0 14px;">Lista de empresas con antecedentes de incumplimientos o prácticas riesgosas.</p>
+  <a href="https://www.networkedasociados.com/p/precaucion-con-estas-empresas.html" class="nwk-cta-secondary" style="border-color:#dc2626; color:#b91c1c !important;">Ver lista →</a>
+</section>
+
+<!-- CIERRE -->
+<section class="nwk-reveal" style="text-align:center; padding:10px 20px 30px;">
+  <p style="font-size:17px; font-weight:700; color:#0A1F44 !important; margin-bottom:4px !important;">Elegir dónde operar es solo el primer paso.</p>
+  <p style="font-size:14px; color:#6b7280 !important;">La gestión, la disciplina y la constancia hacen el resto.</p>
+</section>
+
+<!-- REDES SOCIALES -->
+<section class="nwk-reveal" style="text-align:center; padding:0 20px 50px;">
+  <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a href="https://www.instagram.com/networkedasociados/" target="_blank" class="nwk-cta-secondary">📸 Instagram</a>
+    <a href="https://www.tiktok.com/@networkedasociados" target="_blank" class="nwk-cta-secondary">🎵 TikTok</a>
+    <a href="https://www.youtube.com/@networkedasociados" target="_blank" class="nwk-cta-secondary">▶️ YouTube</a>
+  </div>
+</section>
+
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.nwk-reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('nwk-visible'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  reveals.forEach(function(el){ io.observe(el); });
+
+  var navlinks = document.querySelectorAll('.nwk-navlink');
+  var spySections = document.querySelectorAll('#evaluamos, #brokers, #fondeo');
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        navlinks.forEach(function(n){ n.classList.remove('active'); });
+        var active = document.querySelector('.nwk-navlink[data-target="'+e.target.id+'"]');
+        if(active) active.classList.add('active');
+      }
+    });
+  }, {rootMargin:'-45% 0px -45% 0px'});
+  spySections.forEach(function(s){ spy.observe(s); });
+})();
+</script>
+
+</div>

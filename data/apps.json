@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "BitacoraNetBot", "estado": "Disponible", "tipo": "Bot de Telegram",
+    "descripcion": "Trading journal inteligente dentro de Telegram: registra cada operación, mide tu racha y genera informes de tu proceso.",
+    "funciones": ["Registro de operaciones", "Rachas y rangos de progreso", "Más de 9 informes"],
+    "enlace": "/2026/08/bitacoranetbot.html", "enlace_texto": "Conocer BitacoraNetBot"
+  },
+  {
+    "nombre": "RABOTE", "estado": "En pruebas", "tipo": "Juego móvil",
+    "descripcion": "Rana, Bolirana y Tejo en un juego hecho en Bogotá, rumbo a Google Play.",
+    "funciones": ["Tres juegos tradicionales", "Personajes y jefes de la comunidad", "Sin pay-to-win"],
+    "enlace": "https://raboteplay.blogspot.com/", "enlace_texto": "Ver RABOTE"
+  },
+  {
+    "nombre": "NetworkedAPP", "estado": "Disponible", "tipo": "Estudio de aplicativos",
+    "descripcion": "La casa de mis aplicativos: herramientas que ayudan al ecosistema y conectan a la comunidad.",
+    "funciones": ["Catálogo de proyectos", "Novedades de cada app"],
+    "enlace": "https://networkedapp.github.io", "enlace_texto": "Visitar NetworkedAPP"
+  }
+]

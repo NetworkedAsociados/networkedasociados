@@ -1,0 +1,219 @@
+[
+ {
+  "id": "weltrade",
+  "nombre": "Weltrade",
+  "tipo": "broker",
+  "zona": "catalogo",
+  "calificacion": 4.5,
+  "estado": "Activo",
+  "riesgo": "bajo",
+  "resumen": "Retiros rápidos, plataforma estable y casi 20 años en el mercado. Hoy es el broker que más recomiendo.",
+  "favor": [
+   "Fundado en 2006, casi 20 años operando",
+   "Retiros rápidos en mi experiencia",
+   "MetaTrader 4, MetaTrader 5 y Weltrade Terminal",
+   "Cuentas Premium, Pro y Digital"
+  ],
+  "contra": [],
+  "evidencia": "Experiencia personal",
+  "fundado": "2006",
+  "analisis": "/2026/01/weltrade-broker.html",
+  "afiliado": "https://secure.weltrade.com/login/registration?cxd=65455_474471",
+  "afiliado_texto": "Abrir cuenta en Weltrade",
+  "videos": [
+   "j-rFe-a1y_0"
+  ],
+  "revisar": "El título de la entrada muestra 4 estrellas y el análisis dice 4.5/5. Confirma cuál es la calificación vigente."
+ },
+ {
+  "id": "deriv",
+  "nombre": "Deriv",
+  "tipo": "broker",
+  "zona": "catalogo",
+  "calificacion": 4,
+  "estado": "Activo",
+  "riesgo": "bajo",
+  "resumen": "Operando desde 1999 (antes Binary.com). Índices sintéticos propios 24/7 y depósito desde $5 USD.",
+  "favor": [
+   "Trayectoria desde 1999",
+   "Índices sintéticos disponibles 24/7",
+   "Depósito mínimo desde $5 USD",
+   "Varias plataformas: MT5, DTrader, Deriv X, cTrader, Deriv GO, DBot"
+  ],
+  "contra": [],
+  "evidencia": "Experiencia personal",
+  "fundado": "1999",
+  "analisis": "/2026/01/deriv-45.html",
+  "afiliado": "https://track.deriv.com/_kEBnBUb2MMOhWoqmOk2VLGNd7ZgqdRLk/1/",
+  "afiliado_texto": "Abrir cuenta en Deriv",
+  "videos": [
+   "Wy6mv1P7V2w"
+  ]
+ },
+ {
+  "id": "bridge-market",
+  "nombre": "Bridge Markets",
+  "tipo": "broker",
+  "zona": "catalogo",
+  "calificacion": 3,
+  "estado": "En observación",
+  "riesgo": "medio",
+  "resumen": "Eliminaron varias restricciones de sus términos y les doy otra oportunidad. Sus índices propios aún no tienen confirmación pública de regulación.",
+  "favor": [
+   "Eliminaron cláusulas restrictivas de sus términos",
+   "Crecimiento y expansión a más países",
+   "Buena experiencia personal con su ProFirm de fondeo"
+  ],
+  "contra": [
+   "En el broker mi experiencia personal no fue buena",
+   "Índices propios sin confirmación pública de regulación",
+   "El análisis original lo calificó con 1/5"
+  ],
+  "evidencia": "Experiencia personal y revisión de términos",
+  "fundado": "",
+  "analisis": "/2026/01/bridge-market.html",
+  "afiliado": "https://cliente.bridgemarkets.global/auth/register?referer=9f32b654-941b-4792-b34b-72105418424b",
+  "afiliado_texto": "Ir a Bridge Markets",
+  "videos": []
+ },
+ {
+  "id": "the5ers",
+  "nombre": "The5ers",
+  "tipo": "fondeo",
+  "zona": "catalogo",
+  "calificacion": 4,
+  "estado": "En evaluación",
+  "riesgo": "bajo",
+  "resumen": "Estoy fondeado con ellos. Aún no he llegado a la etapa de retiro, así que no puedo confirmar el pago con mi propia experiencia.",
+  "favor": [
+   "Evaluación progresiva y estructurada",
+   "Enfoque en Forex",
+   "Reglas claras y soporte activo",
+   "Buenas referencias entre traders"
+  ],
+  "contra": [
+   "No es para principiantes sin experiencia",
+   "Requiere cumplimiento estricto de reglas"
+  ],
+  "evidencia": "Experiencia personal en curso",
+  "fundado": "",
+  "analisis": "/2026/01/the5ers.html",
+  "afiliado": "https://www.the5ers.com/?afmc=tkp",
+  "afiliado_texto": "Ir a The5ers",
+  "videos": [
+   "Qg_FVmR6FA0"
+  ]
+ },
+ {
+  "id": "bridge-profirm",
+  "nombre": "Bridge Markets ProFirm",
+  "tipo": "fondeo",
+  "zona": "catalogo",
+  "calificacion": 3.5,
+  "estado": "Equipo NetworkedAsociados",
+  "riesgo": "medio",
+  "resumen": "Cuentas financiadas de $5K a $100K. Me han pagado varios retiros, pero después de eso siento que cambian los spreads a su conveniencia.",
+  "favor": [
+   "Me han pagado varios retiros",
+   "Cuentas desde $5.000 hasta $100.000 USD, en 1 o 2 fases",
+   "Acompañamiento del equipo NetworkedAsociados"
+  ],
+  "contra": [
+   "Después de varios retiros, siento que cambian los spreads a su conveniencia",
+   "Comparte el punto pendiente de Bridge Markets: índices propios sin regulación confirmada"
+  ],
+  "evidencia": "Experiencia personal con retiros recibidos",
+  "fundado": "",
+  "analisis": "/2026/06/bridgeprofirm.html",
+  "afiliado": "https://prop.bridgemarkets.global/registro.php?ref=4512V2600",
+  "afiliado_texto": "Registrarme en ProFirm",
+  "videos": [
+   "3uMvslG3F3E",
+   "j127EjCV0n4"
+  ]
+ },
+ {
+  "id": "fxlive",
+  "nombre": "FX Live Capital",
+  "tipo": "fondeo",
+  "zona": "peligro",
+  "calificacion": 1,
+  "estado": "Alertas documentadas",
+  "riesgo": "alto",
+  "resumen": "Compré 3 cuentas: aprobé 2 y nunca me entregaron las credenciales, alegando reglas ambiguas.",
+  "motivos": [
+   "Negativa a entregar cuentas aprobadas",
+   "Términos y condiciones ambiguos",
+   "Interpretación arbitraria de reglas",
+   "Programa de referidos agresivo",
+   "Sin solución real al reclamar"
+  ],
+  "evidencia": "Experiencia personal documentada en video",
+  "analisis": "/2026/01/fxlive.html",
+  "videos": [
+   "-VLxsdKth2g",
+   "8k_3EXqkuCw",
+   "gNeoZBGt63s"
+  ]
+ },
+ {
+  "id": "veltrix",
+  "nombre": "Veltrix Funding",
+  "tipo": "fondeo",
+  "zona": "peligro",
+  "calificacion": 1,
+  "estado": "Riesgo elevado · cerró sin pagar",
+  "riesgo": "alto",
+  "resumen": "Cerró sin pagar a varios traders, incluyéndome ($6.300 USD). Gustavo Barrios, que se presentó como dueño, prometió pagos durante meses y nunca cumplió.",
+  "motivos": [
+   "Cerró sin pagar a varios traders",
+   "$6.300 USD pendientes conmigo",
+   "Dos acuerdos incumplidos",
+   "Promesas de pago de Gustavo Barrios grabadas en video",
+   "Verifica que su nombre no esté detrás de empresas nuevas"
+  ],
+  "evidencia": "Experiencia personal documentada con evidencia",
+  "analisis": "/2026/01/veltrixfunding.html",
+  "videos": [
+   "AugWkT5OJs0",
+   "oUbcARIGomU"
+  ]
+ },
+ {
+  "id": "neofondeo",
+  "nombre": "NeoFondeo",
+  "tipo": "fondeo",
+  "zona": "peligro",
+  "calificacion": 1,
+  "estado": "Inactiva",
+  "riesgo": "alto",
+  "resumen": "Desapareció operativamente: sin soporte, servidores desconectados y pagos pendientes. Comunicado de cierre del 15 de enero de 2026.",
+  "motivos": [
+   "Soporte inexistente",
+   "Servidores desconectados",
+   "Pagos pendientes",
+   "Sin comunicación oficial"
+  ],
+  "evidencia": "Seguimiento de la comunidad",
+  "analisis": "/2026/01/neofondeo.html",
+  "videos": []
+ },
+ {
+  "id": "topten",
+  "nombre": "TopTen",
+  "tipo": "fondeo",
+  "zona": "peligro",
+  "calificacion": 2,
+  "estado": "Cerrada",
+  "riesgo": "alto",
+  "resumen": "Dejó de pagar a varios traders y posteriormente cerró operaciones.",
+  "motivos": [
+   "Impagos reportados por traders",
+   "Cierre de operaciones"
+  ],
+  "evidencia": "Reportes de traders",
+  "analisis": "/p/precaucion-con-estas-empresas.html",
+  "videos": [],
+  "revisar": "TopTen no tiene ficha propia; solo aparece en tu lista de precaución. Si tienes más información, podemos crearle una."
+ }
+]

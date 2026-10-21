@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Próximamente | NetworkedAsociados</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   NETWORKEDASOCIADOS
+   PÁGINA AISLADA PARA BLOGGER
+   ========================================================= */
+
+#networked-coming-soon,
+#networked-coming-soon *,
+#networked-coming-soon *::before,
+#networked-coming-soon *::after{
+    box-sizing:border-box !important;
+}
+
+#networked-coming-soon{
+    --navy:#050b14;
+    --navy2:#081321;
+    --navy3:#0c1d30;
+
+    --blue:#1769a8;
+    --blue2:#2385cf;
+    --blue3:#4aa7ed;
+
+    --silver:#c8d0da;
+    --silver2:#e9edf2;
+    --silver3:#8d99a8;
+
+    --white:#ffffff;
+
+    width:100% !important;
+    max-width:none !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    font-family:'Inter',Arial,sans-serif !important;
+    font-size:16px !important;
+    line-height:1.5 !important;
+
+    color:var(--white) !important;
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(35,133,207,.28) 0%,
+            rgba(35,133,207,.08) 25%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 10% 45%,
+            rgba(23,105,168,.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #03070d 0%,
+            #07111d 45%,
+            #0a1726 100%
+        ) !important;
+
+    position:relative !important;
+    overflow:hidden !important;
+
+    isolation:isolate !important;
+}
+
+
+/* =========================================================
+   REINICIO DE ESTILOS DE BLOGGER
+   ========================================================= */
+
+#networked-coming-soon h1,
+#networked-coming-soon h2,
+#networked-coming-soon h3,
+#networked-coming-soon h4,
+#networked-coming-soon p,
+#networked-coming-soon a,
+#networked-coming-soon span,
+#networked-coming-soon div,
+#networked-coming-soon section{
+    font-family:'Inter',Arial,sans-serif !important;
+}
+
+#networked-coming-soon h1,
+#networked-coming-soon h2,
+#networked-coming-soon h3,
+#networked-coming-soon h4,
+#networked-coming-soon p{
+    margin-top:0 !important;
+}
+
+#networked-coming-soon a{
+    text-decoration:none !important;
+}
+
+#networked-coming-soon img{
+    max-width:100% !important;
+}
+
+
+/* =========================================================
+   FONDO
+   ========================================================= */
+
+.na-background-glow{
+    position:absolute !important;
+    width:520px !important;
+    height:520px !important;
+
+    border-radius:50% !important;
+
+    background:rgba(30,125,200,.08) !important;
+
+    filter:blur(80px) !important;
+
+    pointer-events:none !important;
+
+    z-index:-1 !important;
+}
+
+.na-glow-one{
+    top:-300px !important;
+    left:-200px !important;
+}
+
+.na-glow-two{
+    right:-300px !important;
+    top:400px !important;
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.na-wrapper{
+    width:100% !important;
+    max-width:1120px !important;
+
+    margin:0 auto !important;
+
+    padding:0 28px 60px 28px !important;
+}
+
+
+/* =========================================================
+   BARRA SUPERIOR
+   ========================================================= */
+
+.na-top-line{
+    width:100% !important;
+
+    min-height:42px !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    border-bottom:1px solid rgba(190,210,230,.10) !important;
+
+    color:#aeb9c6 !important;
+
+    font-size:11px !important;
+    font-weight:700 !important;
+
+    letter-spacing:1.3px !important;
+    text-transform:uppercase !important;
+
+    overflow:hidden !important;
+
+    white-space:nowrap !important;
+}
+
+.na-top-line-inner{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    gap:28px !important;
+
+    width:max-content !important;
+}
+
+.na-top-item{
+    display:inline-flex !important;
+    align-items:center !important;
+
+    gap:8px !important;
+
+    color:#aeb9c6 !important;
+}
+
+.na-top-item::before{
+    content:"" !important;
+
+    width:5px !important;
+    height:5px !important;
+
+    border-radius:50% !important;
+
+    background:var(--blue3) !important;
+
+    box-shadow:0 0 10px rgba(74,167,237,.7) !important;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
+
+.na-navigation{
+    width:100% !important;
+
+    padding:26px 0 !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+
+    gap:20px !important;
+}
+
+.na-brand{
+    display:inline-flex !important;
+    align-items:center !important;
+
+    color:#ffffff !important;
+
+    font-size:18px !important;
+    font-weight:800 !important;
+
+    letter-spacing:-.4px !important;
+}
+
+.na-brand-mark{
+    width:34px !important;
+    height:34px !important;
+
+    margin-right:10px !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    border:1px solid rgba(86,166,225,.55) !important;
+
+    border-radius:9px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #123d66,
+            #0a1d31
+        ) !important;
+
+    color:#dbeeff !important;
+
+    font-size:15px !important;
+    font-weight:800 !important;
+
+    box-shadow:
+        inset 0 0 15px rgba(50,140,215,.12),
+        0 5px 20px rgba(0,0,0,.25) !important;
+}
+
+.na-brand-white{
+    color:#ffffff !important;
+}
+
+.na-brand-blue{
+    color:#4ca9ed !important;
+}
+
+.na-home-link{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    min-height:40px !important;
+
+    padding:0 16px !important;
+
+    border:1px solid rgba(155,180,205,.22) !important;
+
+    border-radius:9px !important;
+
+    background:rgba(255,255,255,.025) !important;
+
+    color:#cbd4df !important;
+
+    font-size:12px !important;
+    font-weight:700 !important;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease !important;
+}
+
+.na-home-link:hover{
+    background:rgba(36,132,207,.12) !important;
+
+    border-color:rgba(74,167,237,.5) !important;
+
+    color:#ffffff !important;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.na-hero{
+    width:100% !important;
+
+    padding:78px 0 35px 0 !important;
+
+    text-align:center !important;
+}
+
+.na-badge{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    min-height:34px !important;
+
+    padding:0 15px !important;
+
+    border:1px solid rgba(72,157,221,.38) !important;
+
+    border-radius:100px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(29,116,181,.18),
+            rgba(20,63,101,.14)
+        ) !important;
+
+    color:#78c2f2 !important;
+
+    font-size:11px !important;
+    font-weight:800 !important;
+
+    letter-spacing:1.8px !important;
+    text-transform:uppercase !important;
+
+    box-shadow:
+        0 0 25px rgba(35,133,207,.08) !important;
+}
+
+.na-hero-small{
+    margin-top:25px !important;
+
+    color:#aab5c2 !important;
+
+    font-family:'Playfair Display',Georgia,serif !important;
+
+    font-size:20px !important;
+    font-weight:600 !important;
+
+    letter-spacing:.2px !important;
+}
+
+.na-hero-title{
+    margin:5px 0 0 0 !important;
+
+    color:#ffffff !important;
+
+    font-family:'Playfair Display',Georgia,serif !important;
+
+    font-size:clamp(42px,7vw,78px) !important;
+
+    line-height:1.03 !important;
+
+    font-weight:700 !important;
+
+    letter-spacing:-2.8px !important;
+
+    text-shadow:
+        0 5px 35px rgba(0,0,0,.35) !important;
+}
+
+.na-hero-title-highlight{
+    display:block !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d8e0e9 0%,
+            #ffffff 35%,
+            #61b7f1 75%,
+            #b9d5e9 100%
+        ) !important;
+
+    -webkit-background-clip:text !important;
+    background-clip:text !important;
+
+    -webkit-text-fill-color:transparent !important;
+
+    color:transparent !important;
+}
+
+.na-hero-description{
+    max-width:720px !important;
+
+    margin:28px auto 0 auto !important;
+
+    color:#b4bfcb !important;
+
+    font-size:15px !important;
+
+    line-height:1.8 !important;
+
+    font-weight:400 !important;
+}
+
+.na-hero-secondary{
+    max-width:650px !important;
+
+    margin:13px auto 0 auto !important;
+
+    color:#7f8d9d !important;
+
+    font-size:13px !important;
+
+    line-height:1.7 !important;
+}
+
+
+/* =========================================================
+   SEPARADOR
+   ========================================================= */
+
+.na-separator{
+    width:100% !important;
+
+    height:1px !important;
+
+    margin:35px 0 0 0 !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(94,156,204,.35),
+            transparent
+        ) !important;
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.na-cards{
+    width:100% !important;
+
+    margin:55px auto 0 auto !important;
+
+    display:grid !important;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr)) !important;
+
+    gap:20px !important;
+
+    align-items:stretch !important;
+}
+
+.na-card{
+    width:100% !important;
+    min-width:0 !important;
+
+    min-height:270px !important;
+
+    margin:0 !important;
+
+    padding:31px 28px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+
+    border:1px solid rgba(143,174,202,.17) !important;
+
+    border-radius:18px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(19,43,66,.78),
+            rgba(8,20,34,.92)
+        ) !important;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.22),
+        inset 0 1px 0 rgba(255,255,255,.025) !important;
+
+    position:relative !important;
+
+    overflow:hidden !important;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease !important;
+}
+
+.na-card::before{
+    content:"" !important;
+
+    position:absolute !important;
+
+    top:0 !important;
+    left:0 !important;
+
+    width:100% !important;
+    height:3px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #2788cf,
+            #75c4f2,
+            transparent
+        ) !important;
+
+    opacity:.8 !important;
+}
+
+.na-card::after{
+    content:"" !important;
+
+    position:absolute !important;
+
+    width:130px !important;
+    height:130px !important;
+
+    top:-75px !important;
+    right:-60px !important;
+
+    border-radius:50% !important;
+
+    background:rgba(50,145,215,.08) !important;
+
+    filter:blur(10px) !important;
+}
+
+.na-card:hover{
+    transform:translateY(-5px) !important;
+
+    border-color:rgba(80,160,215,.42) !important;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.3),
+        0 0 30px rgba(25,115,180,.08) !important;
+}
+
+.na-card-icon{
+    width:52px !important;
+    height:52px !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    margin-bottom:22px !important;
+
+    border-radius:13px !important;
+
+    border:1px solid rgba(84,164,219,.25) !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(32,119,182,.25),
+            rgba(8,31,51,.65)
+        ) !important;
+
+    font-size:23px !important;
+
+    box-shadow:
+        inset 0 0 18px rgba(55,148,211,.08) !important;
+}
+
+.na-card-title{
+    margin:0 0 12px 0 !important;
+
+    color:#f2f5f8 !important;
+
+    font-size:19px !important;
+
+    line-height:1.3 !important;
+
+    font-weight:800 !important;
+
+    letter-spacing:-.4px !important;
+}
+
+.na-card-text{
+    margin:0 !important;
+
+    color:#9faebb !important;
+
+    font-size:13px !important;
+
+    line-height:1.75 !important;
+
+    font-weight:400 !important;
+}
+
+
+/* =========================================================
+   MENSAJE CENTRAL
+   ========================================================= */
+
+.na-message{
+    width:100% !important;
+
+    margin:48px auto 0 auto !important;
+
+    padding:24px 25px !important;
+
+    text-align:center !important;
+
+    border-top:1px solid rgba(135,166,194,.13) !important;
+    border-bottom:1px solid rgba(135,166,194,.13) !important;
+
+    color:#c1cad4 !important;
+
+    font-family:'Playfair Display',Georgia,serif !important;
+
+    font-size:17px !important;
+
+    line-height:1.6 !important;
+}
+
+.na-message strong{
+    color:#ffffff !important;
+}
+
+
+/* =========================================================
+   REDES SOCIALES
+   ========================================================= */
+
+.na-social{
+    width:100% !important;
+
+    margin:65px auto 0 auto !important;
+
+    text-align:center !important;
+}
+
+.na-social-title{
+    margin:0 !important;
+
+    color:#ffffff !important;
+
+    font-size:26px !important;
+
+    line-height:1.3 !important;
+
+    font-weight:800 !important;
+
+    letter-spacing:-.8px !important;
+}
+
+.na-social-text{
+    margin:10px 0 0 0 !important;
+
+    color:#8f9cab !important;
+
+    font-size:13px !important;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.na-buttons{
+    width:100% !important;
+
+    max-width:850px !important;
+
+    margin:28px auto 0 auto !important;
+
+    display:grid !important;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr)) !important;
+
+    gap:12px !important;
+}
+
+.na-button{
+    min-width:0 !important;
+
+    min-height:52px !important;
+
+    padding:0 12px !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+    justify-content:center !important;
+
+    border:1px solid rgba(145,170,195,.18) !important;
+
+    border-radius:11px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22,46,70,.78),
+            rgba(8,21,35,.92)
+        ) !important;
+
+    color:#dce4ec !important;
+
+    font-size:12px !important;
+
+    font-weight:800 !important;
+
+    letter-spacing:.1px !important;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease !important;
+}
+
+.na-button:hover{
+    transform:translateY(-3px) !important;
+
+    border-color:rgba(77,164,222,.55) !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(26,78,119,.82),
+            rgba(10,31,51,.95)
+        ) !important;
+
+    color:#ffffff !important;
+}
+
+.na-button-icon{
+    margin-right:8px !important;
+
+    font-size:16px !important;
+
+    line-height:1 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.na-footer{
+    width:100% !important;
+
+    margin-top:65px !important;
+    padding-top:22px !important;
+
+    border-top:1px solid rgba(145,170,195,.10) !important;
+
+    text-align:center !important;
+
+    color:#657384 !important;
+
+    font-size:10px !important;
+
+    letter-spacing:.8px !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:900px){
+
+    .na-wrapper{
+        padding-left:22px !important;
+        padding-right:22px !important;
+    }
+
+    .na-cards{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr)) !important;
+    }
+
+    .na-buttons{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr)) !important;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media(max-width:600px){
+
+    .na-wrapper{
+        padding-left:17px !important;
+        padding-right:17px !important;
+    }
+
+    .na-top-line{
+        justify-content:flex-start !important;
+
+        overflow:hidden !important;
+    }
+
+    .na-top-line-inner{
+        justify-content:flex-start !important;
+
+        gap:20px !important;
+    }
+
+    .na-navigation{
+        padding:20px 0 !important;
+    }
+
+    .na-brand{
+        font-size:16px !important;
+    }
+
+    .na-brand-mark{
+        width:31px !important;
+        height:31px !important;
+
+        margin-right:8px !important;
+    }
+
+    .na-home-link{
+        min-height:36px !important;
+
+        padding:0 11px !important;
+
+        font-size:10px !important;
+    }
+
+    .na-hero{
+        padding-top:55px !important;
+    }
+
+    .na-hero-small{
+        font-size:17px !important;
+    }
+
+    .na-hero-title{
+        font-size:44px !important;
+
+        letter-spacing:-1.8px !important;
+    }
+
+    .na-hero-description{
+        font-size:13px !important;
+
+        line-height:1.7 !important;
+    }
+
+    .na-hero-secondary{
+        font-size:12px !important;
+    }
+
+    .na-cards{
+        grid-template-columns:
+            minmax(0,1fr) !important;
+
+        gap:15px !important;
+
+        margin-top:40px !important;
+    }
+
+    .na-card{
+        min-height:0 !important;
+
+        padding:26px 23px !important;
+    }
+
+    .na-message{
+        font-size:15px !important;
+
+        margin-top:35px !important;
+    }
+
+    .na-social{
+        margin-top:48px !important;
+    }
+
+    .na-social-title{
+        font-size:22px !important;
+    }
+
+    .na-buttons{
+        grid-template-columns:
+            minmax(0,1fr) !important;
+
+        gap:10px !important;
+    }
+
+    .na-button{
+        min-height:50px !important;
+    }
+
+    .na-footer{
+        margin-top:48px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL MUY PEQUEÑO
+   ========================================================= */
+
+@media(max-width:380px){
+
+    .na-brand{
+        font-size:14px !important;
+    }
+
+    .na-home-link{
+        font-size:9px !important;
+
+        padding:0 8px !important;
+    }
+
+    .na-hero-title{
+        font-size:39px !important;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="networked-coming-soon">
+
+    <div class="na-background-glow na-glow-one"></div>
+    <div class="na-background-glow na-glow-two"></div>
+
+
+    <!-- =====================================================
+         BARRA SUPERIOR
+         ===================================================== -->
+
+    <div class="na-top-line">
+
+        <div class="na-top-line-inner">
+
+            <span class="na-top-item">
+                El Curso Está Por Llegar
+            </span>
+
+            <span class="na-top-item">
+                Psicotrading En Formato Corto
+            </span>
+
+            <span class="na-top-item">
+                Nuevas Actividades
+            </span>
+
+            <span class="na-top-item">
+                Proceso Real, Sin Filtros
+            </span>
+
+            <span class="na-top-item">
+                Una Nueva Etapa Comienza
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTENIDO
+         ===================================================== -->
+
+    <div class="na-wrapper">
+
+
+        <!-- NAVEGACIÓN -->
+
+        <div class="na-navigation">
+
+            <div class="na-brand">
+
+                <span class="na-brand-mark">
+                    N
+                </span>
+
+                <span class="na-brand-white">
+                    Networked
+                </span>
+
+                <span class="na-brand-blue">
+                    Asociados
+                </span>
+
+            </div>
+
+
+            <a
+                class="na-home-link"
+                href="https://www.networkedasociados.com/"
+                target="_blank"
+                rel="noopener"
+            >
+                ← Volver Al Inicio
+            </a>
+
+        </div>
+
+
+        <!-- HERO -->
+
+        <section class="na-hero">
+
+            <span class="na-badge">
+                Próximamente
+            </span>
+
+
+            <div class="na-hero-small">
+                Algo Nuevo
+            </div>
+
+
+            <h1 class="na-hero-title">
+
+                <span class="na-hero-title-highlight">
+                    Está Por Llegar
+                </span>
+
+            </h1>
+
+
+            <p class="na-hero-description">
+                No será un curso más. Será el mismo proceso real que llevo documentando durante años, ahora explicado paso a paso para que puedas entenderlo y aplicarlo.
+            </p>
+
+
+            <p class="na-hero-secondary">
+                Una nueva etapa de NetworkedAsociados está comenzando, con contenido, formación y actividades que iremos descubriendo juntos.
+            </p>
+
+        </section>
+
+
+        <div class="na-separator"></div>
+
+
+        <!-- =================================================
+             TARJETAS
+             ================================================= -->
+
+        <section class="na-cards">
+
+
+            <article class="na-card">
+
+                <div class="na-card-icon">
+                    📘
+                </div>
+
+                <h2 class="na-card-title">
+                    Curso De Trading
+                </h2>
+
+                <p class="na-card-text">
+                    El proceso completo, explicado desde la experiencia real y sin promesas irreales.
+                </p>
+
+            </article>
+
+
+            <article class="na-card">
+
+                <div class="na-card-icon">
+                    🎬
+                </div>
+
+                <h2 class="na-card-title">
+                    Psicotrading En Corto
+                </h2>
+
+                <p class="na-card-text">
+                    Ideas, experiencias y aprendizajes directos para afrontar mejor el día a día del trading.
+                </p>
+
+            </article>
+
+
+            <article class="na-card">
+
+                <div class="na-card-icon">
+                    🎯
+                </div>
+
+                <h2 class="na-card-title">
+                    Nuevas Actividades
+                </h2>
+
+                <p class="na-card-text">
+                    Nuevos proyectos, experiencias y actividades que iremos revelando progresivamente.
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- MENSAJE -->
+
+        <div class="na-message">
+
+            Lo que viene no se queda archivado.
+            <strong>
+                Se construirá y documentará desde el comienzo.
+            </strong>
+
+        </div>
+
+
+        <!-- REDES -->
+
+        <section class="na-social">
+
+            <h2 class="na-social-title">
+                No Te Quedes Por Fuera
+            </h2>
+
+            <p class="na-social-text">
+                Sígueme y entérate primero de lo que viene.
+            </p>
+
+
+            <div class="na-buttons">
+
+
+                <a
+                    class="na-button"
+                    href="https://whatsapp.com/channel/0029VaDNeC0DTkJzN8ltLT37"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <span class="na-button-icon">◉</span>
+                    WhatsApp
+                </a>
+
+
+                <a
+                    class="na-button"
+                    href="https://www.instagram.com/networkedasociados/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <span class="na-button-icon">◎</span>
+                    Instagram
+                </a>
+
+
+                <a
+                    class="na-button"
+                    href="https://www.tiktok.com/@networkedasociados"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <span class="na-button-icon">♪</span>
+                    TikTok
+                </a>
+
+
+                <a
+                    class="na-button"
+                    href="https://www.youtube.com/@networkedasociados"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <span class="na-button-icon">▶</span>
+                    YouTube
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="na-footer">
+
+            NetworkedAsociados — Documentando El Proceso, No Solo Los Resultados.
+
+        </footer>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

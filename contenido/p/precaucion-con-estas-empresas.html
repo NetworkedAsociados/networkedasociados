@@ -1,0 +1,145 @@
+<div id="nwk-wrap" style="font-family:'Poppins',Arial,Helvetica,sans-serif; color:#1f2937; line-height:1.7; max-width:1200px; margin:auto;">
+
+<style>
+  html{scroll-behavior:smooth;}
+  #nwk-wrap h1,#nwk-wrap h2,#nwk-wrap h3,#nwk-wrap h4{text-transform:none !important; letter-spacing:normal; margin:0;}
+  #nwk-wrap *{box-sizing:border-box;}
+
+  .nwk-reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
+  .nwk-reveal.nwk-visible{opacity:1; transform:translateY(0);}
+
+  .nwk-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px;}
+  .nwk-card{background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:32px; transition:border-color .25s ease, box-shadow .25s ease;}
+  .nwk-card:hover{border-color:#0A1F44; box-shadow:0 8px 24px rgba(10,31,68,.08);}
+  .nwk-card-tags{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; align-items:center;}
+  .nwk-chip{font-size:12px; font-weight:700; padding:5px 12px; border-radius:20px; display:inline-block;}
+  .nwk-chip-observacion{background:#fee2e2; color:#991b1b !important;}
+  .nwk-chip-cerrada{background:#f3f4f6; color:#4b5563 !important;}
+  .nwk-stars{font-size:14px; letter-spacing:1px; color:#dc2626 !important; font-weight:700;}
+  .nwk-card-title{color:#0A1F44 !important; font-size:22px; font-weight:800; margin-bottom:8px !important;}
+  .nwk-card-desc{color:#374151 !important; margin:0 0 14px;}
+  .nwk-cta-secondary{background:#fff; color:#0A1F44 !important; border:1px solid #0A1F44; padding:11px 22px; border-radius:8px; text-decoration:none; font-weight:700; font-size:14px; display:inline-flex; align-items:center; gap:7px; transition:background .2s ease, color .2s ease;}
+  .nwk-cta-secondary:hover{background:#0A1F44; color:#FFC107 !important;}
+
+  .nwk-section-head{display:flex; align-items:center; gap:12px; margin-bottom:8px;}
+  .nwk-section-bar{width:5px; height:28px; background:#0A1F44; border-radius:4px; flex-shrink:0;}
+  .nwk-section-bar-danger{background:#dc2626;}
+  .nwk-section-title{color:#0A1F44 !important; font-size:28px; font-weight:800;}
+  .nwk-section-sub{color:#6b7280 !important; margin:6px 0 28px 17px; max-width:640px;}
+
+  @media (max-width:640px){
+    .nwk-card{padding:24px;}
+    .nwk-section-title{font-size:24px !important;}
+  }
+</style>
+
+<!-- HERO -->
+<section style="background:#0A1F44; padding:60px 30px; border-radius:16px; color:#fff; text-align:center; margin-bottom:36px;">
+  <span style="display:inline-block; background:rgba(220,38,38,.18); border:1px solid #dc2626; color:#fca5a5 !important; padding:7px 18px; border-radius:8px; font-size:13px; font-weight:700; margin-bottom:18px;">
+    ⚠️ ZONA DE ESTAFAS
+  </span>
+  <h1 style="color:#fff !important; font-size:34px; font-weight:800; margin:0 0 14px !important; max-width:780px; margin-left:auto !important; margin-right:auto !important;">
+    Seguimiento público de empresas con problemas de pago, soporte o que dejaron de operar
+  </h1>
+  <p style="color:#cfd8e3 !important; font-size:16px; max-width:640px; margin:0 auto;">
+    Documentado para ayudarte a decidir con más información, no para generar alarma innecesaria.
+  </p>
+</section>
+
+<!-- INTRO -->
+<section class="nwk-reveal" style="background:#f8fafc; border-radius:14px; margin-bottom:50px; padding:32px 34px;">
+  <h2 style="color:#0A1F44 !important; font-size:19px; margin-bottom:10px !important;">📋 ¿Cómo se construye esta lista?</h2>
+  <p style="color:#374151 !important; margin:0 0 10px;">La información proviene de experiencias documentadas, seguimiento continuo, reportes públicos de traders y casos verificados por la comunidad.</p>
+  <p style="color:#374151 !important; margin:0;">El objetivo no es atacar empresas ni generar polémica, sino ayudar a otros traders a tomar decisiones informadas y reducir riesgos innecesarios.</p>
+</section>
+
+<!-- LISTADO -->
+<section style="margin-bottom:50px;">
+  <div class="nwk-reveal nwk-section-head">
+    <div class="nwk-section-bar nwk-section-bar-danger"></div>
+    <h2 class="nwk-section-title">Empresas con antecedentes negativos o inactivas</h2>
+  </div>
+  <p class="nwk-reveal nwk-section-sub">Las calificaciones pueden actualizarse si una empresa corrige problemas, compensa a los afectados o modifica sus condiciones operativas.</p>
+
+  <div class="nwk-reveal nwk-grid">
+
+    <div class="nwk-card">
+      <div class="nwk-card-tags">
+        <span class="nwk-chip nwk-chip-observacion">En observación</span>
+        <span class="nwk-stars">⭐☆☆☆☆</span>
+      </div>
+      <h3 class="nwk-card-title">FXLIVE</h3>
+      <p class="nwk-card-desc">Problemas de reglas, pagos y soporte reportados por usuarios.</p>
+      <a href="https://www.networkedasociados.com/2026/01/fxlive.html" class="nwk-cta-secondary">Ver análisis →</a>
+    </div>
+
+    <div class="nwk-card">
+      <div class="nwk-card-tags">
+        <span class="nwk-chip nwk-chip-cerrada">Cerrada</span>
+        <span class="nwk-stars">⭐⭐☆☆☆</span>
+      </div>
+      <h3 class="nwk-card-title">TOPTEN</h3>
+      <p class="nwk-card-desc">Dejó de pagar a varios traders y posteriormente cerró operaciones.</p>
+    </div>
+
+    <div class="nwk-card">
+      <div class="nwk-card-tags">
+        <span class="nwk-chip nwk-chip-cerrada">Cerrada</span>
+        <span class="nwk-stars">⭐☆☆☆☆</span>
+      </div>
+      <h3 class="nwk-card-title">Veltrix Funding</h3>
+      <p class="nwk-card-desc">Presentó retrasos y problemas de pago que inicialmente parecían resolubles mediante acuerdos de compensación con parte de los afectados. Sin embargo, la evidencia recopilada posteriormente indica que se trató de una operación fraudulenta: dejó de operar sin cumplir con la totalidad de los pagos pendientes.</p>
+    </div>
+
+    <div class="nwk-card">
+      <div class="nwk-card-tags">
+        <span class="nwk-chip nwk-chip-cerrada">Inactiva</span>
+        <span class="nwk-stars">⭐☆☆☆☆</span>
+      </div>
+      <h3 class="nwk-card-title">NeoFondeo</h3>
+      <p class="nwk-card-desc">Soporte inexistente, pagos pendientes y desaparición operativa.</p>
+      <a href="https://www.networkedasociados.com/2026/01/neofondeo.html" class="nwk-cta-secondary">Ver comunicado →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ESCALA -->
+<section class="nwk-reveal" style="background:#f8fafc; border-radius:14px; margin-bottom:50px; padding:32px 34px;">
+  <h2 style="color:#0A1F44 !important; font-size:19px; margin-bottom:18px !important;">⭐ Sistema de calificación</h2>
+  <div class="nwk-grid" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr));">
+    <div style="background:#fff; border-radius:10px; padding:18px; text-align:center; border:1px solid #e5e7eb;">⭐⭐⭐⭐⭐<br><strong style="color:#0A1F44 !important;">Excelente</strong></div>
+    <div style="background:#fff; border-radius:10px; padding:18px; text-align:center; border:1px solid #e5e7eb;">⭐⭐⭐⭐☆<br><strong style="color:#0A1F44 !important;">Buena</strong></div>
+    <div style="background:#fff; border-radius:10px; padding:18px; text-align:center; border:1px solid #e5e7eb;">⭐⭐⭐☆☆<br><strong style="color:#0A1F44 !important;">En observación</strong></div>
+    <div style="background:#fff; border-radius:10px; padding:18px; text-align:center; border:1px solid #e5e7eb;">⭐⭐☆☆☆<br><strong style="color:#0A1F44 !important;">No recomendada</strong></div>
+    <div style="background:#fff; border-radius:10px; padding:18px; text-align:center; border:1px solid #e5e7eb;">⭐☆☆☆☆<br><strong style="color:#0A1F44 !important;">Evitar</strong></div>
+  </div>
+</section>
+
+<!-- CTA POSITIVA -->
+<section class="nwk-reveal" style="background:linear-gradient(135deg,#065f46,#10b981); border-radius:16px; color:#fff; margin-bottom:44px; padding:50px 30px; text-align:center;">
+  <h2 style="color:#fff !important; font-size:26px; margin-bottom:12px !important;">✅ ¿Buscas empresas de fondeo confiables?</h2>
+  <p style="margin:0 auto; max-width:600px; color:#d1fae5 !important;">Consulta el listado de empresas activas, con historial documentado y seguimiento continuo.</p>
+  <a href="https://www.networkedasociados.com/p/brokers.html" style="background:#fff; border-radius:10px; color:#065f46 !important; display:inline-block; font-weight:700; margin-top:22px; padding:14px 30px; text-decoration:none;">Ver empresas recomendadas →</a>
+</section>
+
+<!-- REDES -->
+<section class="nwk-reveal" style="text-align:center; padding:0 20px 30px;">
+  <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a href="https://www.instagram.com/networkedasociados/" target="_blank" class="nwk-cta-secondary">📸 Instagram</a>
+    <a href="https://www.tiktok.com/@networkedasociados" target="_blank" class="nwk-cta-secondary">🎵 TikTok</a>
+    <a href="https://www.youtube.com/@networkedasociados" target="_blank" class="nwk-cta-secondary">▶️ YouTube</a>
+  </div>
+</section>
+
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.nwk-reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('nwk-visible'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  reveals.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+</div>
