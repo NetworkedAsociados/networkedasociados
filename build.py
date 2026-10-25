@@ -465,10 +465,8 @@ def build():
 <h2>Curso de trading gratuito</h2>
 <p class="lead">No será un curso más. Será el mismo proceso real que llevo documentando durante años, explicado paso a paso para que puedas entenderlo y aplicarlo.</p>
 <div class="c-state"><span>Estado</span><b>En preparación</b><span>Precio</span><b>Gratis</b></div>
-<div class="a-btns"><a class="btn b-wa" href="{R["canal_whatsapp"]}" target="_blank" rel="noopener">Avísame por WhatsApp</a><a class="btn b-tg" href="{R["canal_telegram"]}" target="_blank" rel="noopener">Avísame por Telegram</a><a class="btn b-ghost" href="{b}p/contenido-de-valor.html">Lo que viene</a></div></div>
-<div class="c-r"><div class="c-mod"><span>01</span><div><b>📘 Curso de trading</b><p>El proceso completo, explicado desde la experiencia real y sin promesas irreales.</p></div></div>
-<div class="c-mod"><span>02</span><div><b>🎬 Psicotrading en corto</b><p>Ideas y aprendizajes directos para afrontar mejor el día a día del trading.</p></div></div>
-<div class="c-mod"><span>03</span><div><b>🎯 Nuevas actividades</b><p>Proyectos y experiencias que iremos revelando poco a poco.</p></div></div></div></div></div></section>
+<div class="a-btns"><a class="btn b-wa" href="{R["canal_whatsapp"]}" target="_blank" rel="noopener">Avísame por WhatsApp</a><a class="btn b-tg" href="{R["canal_telegram"]}" target="_blank" rel="noopener">Avísame por Telegram</a><a class="btn b-acc" href="{b}curso/">Ver el temario</a></div></div>
+<div class="c-r">{"".join(f'<a class="c-mod" href="{b}curso/"><span>{m["numero"]:02d}</span><div><b>{esc(m["titulo"])}</b><p>{len(m["lecciones"])} {"video" if len(m["lecciones"]) == 1 else "videos"} · PDF y evaluación</p></div></a>' for m in D("curso.json")["modulos"][:3])}<a class="c-more" href="{b}curso/">+ 7 módulos más · ver temario completo →</a></div></div></div></section>
 <section class="nx-wrap sec" style="padding-top:0"><div class="head"><div><span class="eyebrow">Mientras tanto</span><h2>Aprende con lo que ya está listo</h2><p class="lead">Podcast, libro y herramientas para trabajar tu psicología y tu disciplina.</p></div></div>
 <div class="cards">{"".join(post_card(p, b) for p in learn)}</div></section>
 <section class="nx-wrap sec" style="padding-top:0"><div class="fixcta"><p><b style="color:var(--fg)">¿Buscas análisis de empresas?</b> Están en su propia sección, con calificación y nivel de riesgo.</p><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn b-ghost b-sm" href="{b}brokers/">Brokers</a><a class="btn b-ghost b-sm" href="{b}fondeo/">Fondeo</a><a class="btn b-ghost b-sm" href="{b}zona-de-peligro/">Zona de peligro</a></div></div></section>
@@ -476,6 +474,74 @@ def build():
     write(out, layout(out, 'Aprende trading: curso gratuito, podcast y libro | NetworkedAsociados',
         'Curso de trading gratuito (próximamente), el podcast Cachetadas de Verdad, el libro La Bitácora Rota y herramientas para tu disciplina como trader.', body, sec='sec-contenido', cur='contenido',
         ld=[crumbs_ld([("Inicio", ""), ("Contenido", None)])])); sitemap.append(('/contenido/', date.today().isoformat()))
+
+    # ---- curso ----
+    out = '/curso/index.html'; b = rel(out)
+    C = D('curso.json')
+    def yid(u):
+        m = re.search(r'(?:youtu\.be/|v=|embed/|shorts/|live/)([\w-]{11})', u or '')
+        return m.group(1) if m else ''
+    def res(u):
+        if not u: return ''
+        if u.startswith('http'): return u
+        if u.startswith('/'): return b + u.lstrip('/')
+        return b + 'assets/curso/' + u
+    def chip(kind, label, href, icon):
+        if not href: return f'<span class="rc off" title="Próximamente">{icon}<span>{label}</span><em>Próximamente</em></span>'
+        ext = ' target="_blank" rel="noopener"' if href.startswith('http') else ''
+        return f'<a class="rc on rc-{kind}" href="{esc(href)}"{ext}>{icon}<span>{label}</span><em>Abrir</em></a>'
+    I_V = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>'
+    I_P = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>'
+    I_E = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg>'
+    total = sum(len(m['lecciones']) for m in C['modulos'])
+    ready = sum(1 for m in C['modulos'] for l in m['lecciones'] if yid(l['video']))
+    mods_html = ''
+    for m in C['modulos']:
+        lrows = ''; mready = 0
+        for l in m['lecciones']:
+            v = yid(l['video']); mready += 1 if v else 0
+            pdf, ev = res(l['pdf']), res(l['evaluacion'])
+            st = '<span class="ls ok">Disponible</span>' if v else '<span class="ls soon">Próximamente</span>'
+            player = f'<div class="lplayer" hidden>{yt(v, "Lección " + l["numero"] + ": " + l["titulo"])}</div>' if v else ''
+            vbtn = (f'<button class="rc on rc-video" data-play>{I_V}<span>Video</span><em>Ver ahora</em></button>' if v
+                    else chip('video', 'Video', '', I_V))
+            lrows += f'''<li class="lesson{" ready" if v else ""}" id="l{l["numero"].replace(".", "-")}" data-lesson="{l["numero"]}">
+<div class="lhead"><span class="ln">{l["numero"]}</span><div class="lt"><h4>{esc(l["titulo"])}</h4><small>⏱ {esc(l["duracion"])}</small></div>{st}
+{f'<label class="seen" title="Marcar como vista"><input type="checkbox" data-seen="{l["numero"]}"><span>Vista</span></label>' if v else ''}</div>
+<div class="lres">{vbtn}{chip("pdf", "PDF", pdf, I_P)}{chip("eval", "Evaluación", ev, I_E)}</div>{player}</li>'''
+        n = len(m['lecciones'])
+        mods_html += f'''<details class="mod rv"{" open" if m["numero"] == 1 else ""}><summary><span class="mn">{m["numero"]:02d}</span><span class="mt"><small>Módulo {m["numero"]}</small><b>{esc(m["titulo"])}</b></span>
+<span class="mc">{mready}/{n} <small>{"video" if n == 1 else "videos"}</small></span><span class="mx" aria-hidden="true"></span></summary><ol class="lessons">{lrows}</ol></details>'''
+    tools = ''
+    for t in C['herramientas']:
+        h = res(t['enlace'])
+        btn = (f'<a class="btn b-acc b-sm" href="{esc(h)}"{" target=_blank rel=noopener" if h.startswith("http") else ""}>{"Abrir" if t["tipo"] in ("App", "Calculadora") else "Descargar"}</a>'
+               if h else '<span class="btn b-ghost b-sm is-off">Próximamente</span>')
+        tools += f'<div class="tool rv{"" if h else " off"}"><span class="tt">{esc(t["tipo"])}</span><h3>{esc(t["nombre"])}</h3><p>{esc(t["descripcion"])}</p>{btn}</div>'
+    first = next((f'#l{l["numero"].replace(".", "-")}' for m in C['modulos'] for l in m['lecciones'] if yid(l['video'])), '#modulos')
+    body = f'''<main class="nx">
+<section class="shead cur-hero"><canvas class="nx-net" aria-hidden="true"></canvas><div class="nx-wrap">
+{crumbs_html(b, [("Inicio", ""), ("Contenido", "contenido/"), ("Curso", None)])}
+<span class="c-badge" style="margin-top:22px"><i></i>{"Nuevas lecciones cada semana" if ready else "Próximamente"}</span>
+<h1>{esc(C["titulo"])}</h1><p class="lead">{esc(C["subtitulo"])}. El proceso real que llevo años documentando, explicado paso a paso.</p>
+<div class="cur-stats"><div><b>{len(C["modulos"])}</b><span>Módulos</span></div><div><b>{total}</b><span>Videos</span></div><div><b>{ready}/{total}</b><span>Publicados</span></div><div><b>$0</b><span>Gratis</span></div></div>
+<div class="cur-prog" data-total="{ready}"><div class="bar"><i style="--w:{(ready / total * 100) if total else 0:.0f}%"></i><u></u></div><p><span data-prog>Publicado: {ready} de {total} lecciones.</span></p></div>
+<div class="a-btns">{f'<a class="btn b-acc" href="{first}">Empezar el curso</a>' if ready else ""}<a class="btn b-wa" href="{R["canal_whatsapp"]}" target="_blank" rel="noopener">Avísame de cada lección</a><a class="btn b-ghost" href="{R["youtube"]}" target="_blank" rel="noopener">Ver en YouTube</a></div>
+</div></section>
+<section class="nx-wrap sec" style="padding-top:28px">
+<div class="tabs" role="tablist" aria-label="Secciones del curso"><button role="tab" aria-selected="true" aria-controls="modulos" data-tab="modulos">📚 Módulos</button><button role="tab" aria-selected="false" aria-controls="herramientas" data-tab="herramientas">🧰 Herramientas</button></div>
+<div id="modulos" role="tabpanel" class="tabpanel"><div class="mods">{mods_html}</div></div>
+<div id="herramientas" role="tabpanel" class="tabpanel" hidden><p class="lead" style="margin-bottom:18px">Plantillas, calculadoras y recursos para descargar y usar mientras haces el curso.</p><div class="tools">{tools}</div></div>
+</section>
+<section class="nx-wrap sec" style="padding-top:0"><div class="fixcta"><p>Este curso es educativo. No es asesoría financiera ni garantiza resultados: el trading con índices sintéticos implica riesgo y puedes perder dinero.</p><a class="btn b-ghost b-sm" href="{b}legal/condiciones.html">Condiciones</a></div></section>
+<section class="nx-wrap sec" style="padding-top:0">{follow_box(b, "No te pierdas ninguna lección", "Te aviso en el canal cada vez que publique un video nuevo del curso.")}</section></main>'''
+    ld = [crumbs_ld([("Inicio", ""), ("Contenido", "contenido/"), ("Curso", None)]),
+          {"@context": "https://schema.org", "@type": "Course", "name": C["titulo"], "description": C["subtitulo"] + ". Curso gratuito de NetworkedAsociados.",
+           "inLanguage": "es", "isAccessibleForFree": True, "provider": {"@type": "Organization", "name": "NetworkedAsociados", "sameAs": DOM + '/'}}]
+    write(out, layout(out, 'Curso gratis de trading de índices sintéticos | NetworkedAsociados',
+        'Curso gratuito de trading de índices sintéticos: 10 módulos y 20 videos con PDF y evaluación. Análisis técnico, gestión de riesgo, psicología y estrategia.',
+        body, sec='sec-contenido', cur='contenido', ld=ld)); sitemap.append(('/curso/', date.today().isoformat()))
+    index.append(dict(t='Curso de trading de índices sintéticos', s='Curso', d='10 módulos, 20 videos, PDF y evaluaciones. Gratis.', k='curso indices sinteticos gratis aprender', u='curso/', f=True))
 
     # ---- libro ----
     out = '/libro/index.html'; b = rel(out)

@@ -239,4 +239,39 @@
     function bad() { var h = img.closest('figure,.ph,.page') || img.parentNode; h.classList.add('noimg'); img.style.display = 'none'; if (img.classList.contains('a-bg')) img.remove(); }
     if (img.complete && img.naturalWidth === 0 && img.src) bad(); else img.addEventListener('error', bad);
   });
+
+  /* ---------- curso ---------- */
+  var tabs = document.querySelectorAll('[data-tab]');
+  function showTab(id, push) {
+    tabs.forEach(function (t) { var on = t.dataset.tab === id; t.setAttribute('aria-selected', on); document.getElementById(t.dataset.tab).hidden = !on; });
+    if (push) try { history.replaceState(null, '', '#' + id); } catch (e) {}
+  }
+  if (tabs.length) {
+    tabs.forEach(function (t) { t.addEventListener('click', function () { showTab(t.dataset.tab, true); }); });
+    if (location.hash === '#herramientas') showTab('herramientas');
+    var lh = location.hash.match(/^#l\d+-\d+$/);
+    if (lh) { var le = document.querySelector(lh[0]); if (le) { le.closest('details').open = true; setTimeout(function () { le.scrollIntoView({ block: 'start' }); }, 50); } }
+    document.querySelectorAll('a[href^="#l"]').forEach(function (a) { a.addEventListener('click', function () { var le = document.querySelector(a.getAttribute('href')); if (le) le.closest('details').open = true; }); });
+  }
+  document.querySelectorAll('[data-play]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var p = b.closest('.lesson').querySelector('.lplayer'); if (!p) return;
+      p.hidden = !p.hidden; b.querySelector('em').textContent = p.hidden ? 'Ver ahora' : 'Ocultar';
+      if (!p.hidden) { var y = p.querySelector('.yt'); if (y && !y.querySelector('iframe')) y.click(); }
+    });
+  });
+  var seenKey = 'nx-curso-vistas', seen = {};
+  try { seen = JSON.parse(localStorage.getItem(seenKey) || '{}') || {}; } catch (e) { seen = {}; }
+  var boxes = document.querySelectorAll('[data-seen]'), prog = document.querySelector('.cur-prog');
+  function updSeen() {
+    var n = 0;
+    boxes.forEach(function (c) { var on = !!seen[c.dataset.seen]; c.checked = on; c.closest('.lesson').classList.toggle('done', on); if (on) n++; });
+    if (prog) {
+      var tot = parseInt(prog.dataset.total, 10) || 0, t = prog.querySelector('[data-prog]');
+      prog.querySelector('.bar').style.setProperty('--seen', (tot ? n / tot * 100 : 0) + '%');
+      if (tot && t) t.textContent = 'Has visto ' + n + ' de ' + tot + ' lecciones publicadas.';
+    }
+  }
+  boxes.forEach(function (c) { c.addEventListener('change', function () { if (c.checked) seen[c.dataset.seen] = 1; else delete seen[c.dataset.seen]; try { localStorage.setItem(seenKey, JSON.stringify(seen)); } catch (e) {} updSeen(); }); });
+  if (boxes.length) updSeen();
 })();

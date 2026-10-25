@@ -1,0 +1,271 @@
+{
+  "_instrucciones": [
+    "Para publicar una lección, pega los enlaces entre las comillas vacías y guarda (Commit changes).",
+    "video: el enlace de YouTube, por ejemplo https://youtu.be/AbCdEfGhIjK",
+    "pdf: un enlace de Google Drive, o el nombre de un PDF que subas a la carpeta static/curso (por ejemplo modulo-1-1.pdf)",
+    "evaluacion: el enlace de tu formulario (Google Forms u otro)",
+    "Si un campo queda vacío (\"\"), en la página aparece Próximamente."
+  ],
+  "titulo": "Curso de Trading de Índices Sintéticos",
+  "subtitulo": "Gratis · 10 módulos · 20 videos · de 3 a 5 horas",
+  "modulos": [
+    {
+      "numero": 1,
+      "titulo": "Introducción a los Índices Sintéticos",
+      "lecciones": [
+        {
+          "numero": "1.1",
+          "titulo": "¿Qué son los índices sintéticos y cómo funcionan?",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        },
+        {
+          "numero": "1.2",
+          "titulo": "Diferencias entre índices sintéticos y otros instrumentos financieros",
+          "duracion": "8-10 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        },
+        {
+          "numero": "1.3",
+          "titulo": "Ventajas y desventajas de operar con índices sintéticos",
+          "duracion": "8-10 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "Creación de una Cuenta y Configuración de la Plataforma",
+      "lecciones": [
+        {
+          "numero": "2.1",
+          "titulo": "Guía paso a paso para crear una cuenta en la plataforma de trading",
+          "duracion": "8-10 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        },
+        {
+          "numero": "2.2",
+          "titulo": "Configuración de MetaTrader 5 (MT5) para operar índices sintéticos",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "Análisis Técnico Aplicado a los Índices Sintéticos",
+      "lecciones": [
+        {
+          "numero": "3.1",
+          "titulo": "Conceptos básicos de análisis técnico",
+          "duracion": "12-15 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        },
+        {
+          "numero": "3.2",
+          "titulo": "Identificación de patrones y tendencias en gráficos",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        },
+        {
+          "numero": "3.3",
+          "titulo": "Uso de indicadores técnicos relevantes",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Gestión de Riesgos en el Trading de Índices Sintéticos",
+      "lecciones": [
+        {
+          "numero": "4.1",
+          "titulo": "Importancia de la gestión de riesgos y cómo establecer stop-loss y take-profit",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        },
+        {
+          "numero": "4.2",
+          "titulo": "Cálculo del tamaño de la posición y apalancamiento adecuado",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "titulo": "Psicología del Trading",
+      "lecciones": [
+        {
+          "numero": "5.1",
+          "titulo": "Cómo manejar las emociones y estrategias para mantener la disciplina",
+          "duracion": "12-15 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        }
+      ]
+    },
+    {
+      "numero": 6,
+      "titulo": "Mi Estrategia Personal de Trading",
+      "lecciones": [
+        {
+          "numero": "6.1",
+          "titulo": "Mi estrategia en detalle: criterios de entrada y salida",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        },
+        {
+          "numero": "6.2",
+          "titulo": "Ejemplos prácticos y estudios de caso",
+          "duracion": "12-15 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        }
+      ]
+    },
+    {
+      "numero": 7,
+      "titulo": "Backtesting y Optimización de la Estrategia",
+      "lecciones": [
+        {
+          "numero": "7.1",
+          "titulo": "Cómo realizar backtesting en datos históricos",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        },
+        {
+          "numero": "7.2",
+          "titulo": "Ajustes y optimización para mejorar resultados",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        }
+      ]
+    },
+    {
+      "numero": 8,
+      "titulo": "Operaciones en Vivo",
+      "lecciones": [
+        {
+          "numero": "8.1",
+          "titulo": "Demostración de operaciones en tiempo real aplicando la estrategia",
+          "duracion": "12-15 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        },
+        {
+          "numero": "8.2",
+          "titulo": "Análisis postoperación para evaluar el desempeño",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        }
+      ]
+    },
+    {
+      "numero": 9,
+      "titulo": "Errores Comunes y Cómo Evitarlos",
+      "lecciones": [
+        {
+          "numero": "9.1",
+          "titulo": "Errores frecuentes y consejos para prevenirlos",
+          "duracion": "12-15 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        }
+      ]
+    },
+    {
+      "numero": 10,
+      "titulo": "Conclusiones y Próximos Pasos",
+      "lecciones": [
+        {
+          "numero": "10.1",
+          "titulo": "Resumen de lo aprendido y recomendaciones para continuar como trader",
+          "duracion": "10-12 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        },
+        {
+          "numero": "10.2",
+          "titulo": "Beneficios de unirte a los grupos privados VIP",
+          "duracion": "8-10 min",
+          "video": "",
+          "pdf": "",
+          "evaluacion": ""
+        }
+      ]
+    }
+  ],
+  "herramientas": [
+    {
+      "nombre": "Plantilla de bitácora de trading",
+      "descripcion": "Registra cada operación, tu emoción y lo que aprendiste.",
+      "tipo": "Plantilla",
+      "enlace": ""
+    },
+    {
+      "nombre": "Calculadora de tamaño de posición",
+      "descripcion": "Cuánto lote usar según tu capital y tu stop-loss.",
+      "tipo": "Calculadora",
+      "enlace": ""
+    },
+    {
+      "nombre": "Checklist antes de operar",
+      "descripcion": "Las preguntas que debes responder antes de abrir una operación.",
+      "tipo": "PDF",
+      "enlace": ""
+    },
+    {
+      "nombre": "Plantilla de plan de trading",
+      "descripcion": "Define tu horario, tus reglas de entrada y salida y tu riesgo máximo.",
+      "tipo": "Plantilla",
+      "enlace": ""
+    },
+    {
+      "nombre": "Plantilla de backtesting",
+      "descripcion": "Prueba tu estrategia con datos históricos antes de usar dinero real.",
+      "tipo": "Plantilla",
+      "enlace": ""
+    },
+    {
+      "nombre": "BitacoraNetBot",
+      "descripcion": "Mi trading journal dentro de Telegram, gratis para empezar.",
+      "tipo": "App",
+      "enlace": "/2026/08/bitacoranetbot.html"
+    }
+  ]
+}

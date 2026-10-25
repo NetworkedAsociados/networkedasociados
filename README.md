@@ -47,6 +47,23 @@ No necesitas instalar nada en tu computador.
 3. Cambia solo el texto entre comillas. Si un texto lleva comillas simples (') dentro, escríbelo como \'.
 4. Guarda. Si algo queda mal escrito, la pestaña **Actions** de GitHub mostrará una X roja y el sitio anterior sigue publicado.
 
+## Cómo ir llenando el curso
+
+Todo el curso está en `data/curso.json`. Cada lección tiene tres campos vacíos:
+
+```
+"video": "",
+"pdf": "",
+"evaluacion": ""
+```
+
+- **video:** pega el enlace de YouTube entre las comillas, por ejemplo `"video": "https://youtu.be/AbCdEfGhIjK"`. Mientras esté vacío, la lección dice *Próximamente*.
+- **pdf:** pega un enlace de Google Drive (compartido como "Cualquier persona con el enlace"), o sube el PDF a la carpeta `static/curso` y escribe solo su nombre: `"pdf": "modulo-1-1.pdf"`.
+- **evaluacion:** pega el enlace de tu formulario de Google Forms.
+- **Herramientas:** al final del archivo, en `"herramientas"`, cada una tiene `"enlace": ""`. Pega ahí el enlace o el nombre del archivo que subiste a `static/curso`.
+
+Cuida no borrar las comillas ni las comas. Al guardar, el curso se actualiza solo.
+
 ## Cómo publicar un análisis o artículo nuevo
 
 1. Crea el archivo en `contenido/` con la dirección que quieras, por ejemplo `contenido/2026/11/nueva-empresa.html`, y pega ahí el HTML del artículo (el mismo que pegabas en Blogger).
