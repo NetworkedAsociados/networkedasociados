@@ -90,3 +90,8 @@ python -m http.server 8000 --directory _site
 ```
 
 Luego abre `http://localhost:8000`.
+
+## Bitácora Trader web (carpeta `bitacora/`)
+
+La carpeta `bitacora/` es la app web de Bitácora Trader (se ve en networkedasociados.com/bitacora).
+No se edita a mano: se compila en el repositorio `bitacora-trader` y se copia aquí tal cual.

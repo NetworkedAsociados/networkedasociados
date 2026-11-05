@@ -6,6 +6,7 @@ Para agregar una empresa, app o página edita los archivos de /data (ver README.
 Sin dependencias externas: solo Python 3.8+.
 """
 import json, os, re, shutil, html as H
+from urllib.parse import quote
 import bloques as BL
 from articulos import A as ARTICULOS
 from convertir import convert
@@ -75,9 +76,11 @@ def header(b, cur):
 <nav aria-label="Principal">{links}</nav>
 <button class="nx-iconbtn nx-search-btn" data-search aria-label="Buscar">{ICON["search"]}<span class="t">Buscar</span><kbd>Ctrl K</kbd></button>
 <button class="nx-iconbtn nx-menu" aria-label="Abrir menú" aria-expanded="false">{ICON["menu"]}</button>
+<a class="nx-iconbtn nx-entrar" href="{b}bitacora/">Entrar</a>
 <a class="nx-join" href="{b}comunidad/">Únete gratis</a>
 </div></header>
-<div class="nx-drawer"><div class="nx-wrap">{drawer}<a href="{b}comunidad/">Comunidad<small>Redes y canales</small></a></div></div>
+<a class="nx-live" id="nx-live" hidden target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span><b>John está en vivo</b><span class="t" id="nx-live-t">Toca para unirte al live en YouTube</span><span aria-hidden="true">→</span></a>
+<div class="nx-drawer"><div class="nx-wrap">{drawer}<a href="{b}comunidad/">Comunidad<small>Redes y canales</small></a><a href="{b}equipo/">Únete al equipo<small>Mentoría NETWORKED y plantilla NRZ</small></a><a href="{b}bitacora/">Entrar a Bitácora Trader<small>Tu bitácora en la web</small></a></div></div>
 <div class="nx-search" id="nx-search" hidden role="dialog" aria-modal="true" aria-label="Buscar en el sitio"><div class="box">
 <input id="nx-q" type="search" placeholder="Busca un broker, empresa o tema…" autocomplete="off" aria-label="Buscar">
 <ul id="nx-res"></ul><div class="hint"><span>↑ ↓ para moverte · Enter para abrir</span><span>Esc para cerrar</span></div></div></div>'''
@@ -88,7 +91,7 @@ def footer(b):
 <div><div class="brand"><img src="{b}assets/logo.png" alt="" width="40" height="40">NetworkedAsociados</div>
 <p class="slogan">{CFG["eslogan"]}.</p>
 <p style="margin-top:10px">Investigación, experiencias reales y herramientas para tu camino como trader.</p></div>
-<div><h4>Explorar</h4><ul><li><a href="{b}brokers/">Brokers</a></li><li><a href="{b}fondeo/">Empresas de fondeo</a></li><li><a href="{b}zona-de-peligro/">Zona de peligro</a></li><li><a href="{b}contenido/">Contenido</a></li><li><a href="{b}libro/">Mi libro</a></li><li><a href="{b}aplicaciones/">Aplicaciones</a></li></ul></div>
+<div><h4>Explorar</h4><ul><li><a href="{b}brokers/">Brokers</a></li><li><a href="{b}fondeo/">Empresas de fondeo</a></li><li><a href="{b}zona-de-peligro/">Zona de peligro</a></li><li><a href="{b}contenido/">Contenido</a></li><li><a href="{b}libro/">Mi libro</a></li><li><a href="{b}aplicaciones/">Aplicaciones</a></li><li><a href="{b}equipo/">Únete al equipo</a></li><li><a href="{b}bitacora/">Entrar a Bitácora Trader</a></li></ul></div>
 <div><h4>Comunidad</h4><ul><li><a href="{R["youtube"]}">YouTube</a></li><li><a href="{R["tiktok"]}">TikTok</a></li><li><a href="{R["instagram"]}">Instagram</a></li><li><a href="{R["facebook"]}">Facebook</a></li><li><a href="{R["canal_whatsapp"]}">Canal de WhatsApp</a></li><li><a href="{R["canal_telegram"]}">Canal de Telegram</a></li></ul></div>
 <div><h4>Transparencia</h4><ul><li><a href="{b}legal/metodologia.html">Cómo califico</a></li><li><a href="{b}legal/afiliados.html">Enlaces de afiliado</a></li><li><a href="{b}legal/aviso-legal.html">Aviso legal</a></li><li><a href="{b}legal/privacidad.html">Privacidad y cookies</a></li><li><a href="{b}legal/condiciones.html">Condiciones de uso</a></li></ul></div>
 </div>
@@ -333,6 +336,9 @@ def build():
     shutil.rmtree(OUT, ignore_errors=True); os.makedirs(OUT)
     shutil.copytree(os.path.join(ROOT, 'static'), os.path.join(OUT, 'assets'))
     open(os.path.join(OUT, '.nojekyll'), 'w').close()
+    # Bitácora Trader web (la compila el repositorio de la app y se copia tal cual).
+    if os.path.isdir(os.path.join(ROOT, 'bitacora')):
+        shutil.copytree(os.path.join(ROOT, 'bitacora'), os.path.join(OUT, 'bitacora'))
     open(os.path.join(OUT, 'CNAME'), 'w').write(DOM.split('//')[1] + '\n')
     sitemap, index = [], []
 
@@ -601,6 +607,29 @@ def build():
 <section class="nx-wrap sec" id="pedir" style="padding-top:0">{ask_box()}</section></main>'''
     write(out, layout(out, 'Comunidad NetworkedAsociados: redes y canales', 'Sígueme en YouTube, TikTok, Instagram y únete a los canales de WhatsApp y Telegram de NetworkedAsociados.',
         body, sec='sec-contenido', cur='', ld=[crumbs_ld([("Inicio", ""), ("Comunidad", None)])])); sitemap.append(('/comunidad/', date.today().isoformat()))
+
+    # ---- únete al equipo ----
+    out = '/equipo/index.html'; b = rel(out)
+    wa = R["whatsapp_directo"]
+    def oferta(id_, titulo, texto, puntos, msg):
+        lis = ''.join(f'<li>{x}</li>' for x in puntos)
+        return f'''<article class="app rv"><span class="eyebrow">{"Acceso prioritario" if id_ == "networked" else "Herramienta MT5"}</span><h3>{titulo}</h3><p>{texto}</p>
+<ul class="eq-list">{lis}</ul><a class="btn b-wa" href="{wa}?text={quote(msg)}" target="_blank" rel="noopener">Escribir por WhatsApp</a></article>'''
+    body = f'''<main class="nx">{shead(b, "comunidad", "Únete al equipo", "Opera acompañado. La mentoría y la plantilla se hablan conmigo en persona: me escribes, conversamos de tu proceso y te digo si es para ti.", [("Inicio", ""), ("Únete al equipo", None)])}
+<section class="nx-wrap sec"><div class="apps">
+{oferta("networked", "🤝 Mentoría NETWORKED", "Seguimiento personal de tu proceso con Bitácora Trader y el método de mi libro.", ["Seguimiento de tu bitácora y tu PEG", "Todo lo de PRO en Bitácora Trader mientras estés en la mentoría", "Plan Fénix guiado y revisión de tus semanas", "Plantilla NRZ incluida"], "Hola John, quiero información de la mentoría NETWORKED (acceso prioritario).")}
+{oferta("nrz", "📈 Plantilla NRZ", "Networked Reaction Zones: la plantilla que uso para operar en MetaTrader 5.", ["Indicador de zonas de reacción", "Te explico cómo instalarla y usarla"], "Hola John, quiero información de la plantilla NRZ.")}
+</div></section>
+<section class="nx-wrap sec" style="padding-top:0"><div class="ask rv"><div><span class="eyebrow">Déjame tus datos</span><h2 class="h" style="font-size:clamp(1.6rem,3.4vw,2.3rem);margin-top:10px">Cuéntame en qué vas</h2>
+<p class="lead" style="margin-top:8px">Tu mensaje me llega directo por WhatsApp.</p></div>
+<form class="eq-form" id="eqf" data-wa="{wa}"><input name="nombre" type="text" placeholder="Tu nombre" aria-label="Tu nombre" required>
+<select name="interes" aria-label="Qué te interesa"><option>Mentoría NETWORKED</option><option>Plantilla NRZ</option><option>Las dos</option></select>
+<textarea name="mensaje" rows="3" placeholder="¿Cuánto llevas operando? ¿Qué te cuesta más?" aria-label="Mensaje"></textarea>
+<button class="btn b-wa" type="submit">Enviar por WhatsApp</button></form></div></section>
+<section class="nx-wrap sec" style="padding-top:0"><div class="fixcta"><p><b style="color:var(--fg)">📔 Bitácora Trader.</b> Tu cuenta es la misma en la app Android y en la web.</p><a class="btn b-acc b-sm" href="{b}bitacora/">Entrar</a></div></section></main>'''
+    write(out, layout(out, 'Únete al equipo: mentoría NETWORKED y plantilla NRZ | NetworkedAsociados',
+        'Mentoría personal de trading con seguimiento en Bitácora Trader y la plantilla NRZ para MetaTrader 5. Habla directo con John.',
+        body, sec='sec-apps', cur='', ld=[crumbs_ld([("Inicio", ""), ("Únete al equipo", None)])])); sitemap.append(('/equipo/', date.today().isoformat()))
 
     # ---- legal ----
     P = lambda t: f'<span class="pend">PENDIENTE: {t}</span>'

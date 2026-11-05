@@ -140,6 +140,33 @@
     });
   }
 
+  /* Únete al equipo: el formulario arma el mensaje de WhatsApp */
+  var eqf = document.getElementById('eqf');
+  if (eqf) {
+    eqf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var d = new FormData(eqf);
+      var t = 'Hola John, soy ' + (d.get('nombre') || '').trim() + '. Me interesa: ' + d.get('interes') + '.';
+      var m = (d.get('mensaje') || '').trim(); if (m) t += ' ' + m;
+      window.open(eqf.dataset.wa + '?text=' + encodeURIComponent(t), '_blank', 'noopener');
+    });
+  }
+
+  /* Aviso "John está en vivo" (lo enciende el admin desde Bitácora Trader) */
+  var live = document.getElementById('nx-live');
+  if (live && window.fetch) {
+    fetch('https://vtpybepbtlumbyjdwkoi.supabase.co/rest/v1/en_vivo?select=activo,url,titulo&id=eq.1',
+      { headers: { apikey: 'sb_publishable_7c-Ur40b2Mh-7k62bkn5Tg_2Vw9hlfQ' } })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (f) {
+        var v = f && f[0];
+        if (!v || !v.activo || !/^https:\/\//.test(v.url || '')) return;
+        live.href = v.url;
+        if (v.titulo) document.getElementById('nx-live-t').textContent = v.titulo;
+        live.hidden = false;
+      }).catch(function () {});
+  }
+
   /* compartir */
   document.querySelectorAll('[data-copy]').forEach(function (b) {
     b.addEventListener('click', function () {

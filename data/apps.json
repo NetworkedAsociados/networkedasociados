@@ -1,20 +1,53 @@
 [
   {
-    "nombre": "BitacoraNetBot", "estado": "Disponible", "tipo": "Bot de Telegram",
+    "nombre": "Bitácora Trader",
+    "estado": "Disponible",
+    "tipo": "App Android y web",
+    "descripcion": "Tu bitácora de trading con el método de mi libro: psicología primero, luego tus números y tu capital, con cuentas de fondeo y Networked Academy.",
+    "funciones": [
+      "Antes de operar y finalizar el día",
+      "PEG, rangos y ejercicios del libro",
+      "Capital real y cuentas de fondeo"
+    ],
+    "enlace": "/bitacora/",
+    "enlace_texto": "Entrar a Bitácora Trader"
+  },
+  {
+    "nombre": "BitacoraNetBot",
+    "estado": "Disponible",
+    "tipo": "Bot de Telegram",
     "descripcion": "Trading journal inteligente dentro de Telegram: registra cada operación, mide tu racha y genera informes de tu proceso.",
-    "funciones": ["Registro de operaciones", "Rachas y rangos de progreso", "Más de 9 informes"],
-    "enlace": "/2026/08/bitacoranetbot.html", "enlace_texto": "Conocer BitacoraNetBot"
+    "funciones": [
+      "Registro de operaciones",
+      "Rachas y rangos de progreso",
+      "Más de 9 informes"
+    ],
+    "enlace": "/2026/08/bitacoranetbot.html",
+    "enlace_texto": "Conocer BitacoraNetBot"
   },
   {
-    "nombre": "RABOTE", "estado": "En pruebas", "tipo": "Juego móvil",
+    "nombre": "RABOTE",
+    "estado": "En pruebas",
+    "tipo": "Juego móvil",
     "descripcion": "Rana, Bolirana y Tejo en un juego hecho en Bogotá, rumbo a Google Play.",
-    "funciones": ["Tres juegos tradicionales", "Personajes y jefes de la comunidad", "Sin pay-to-win"],
-    "enlace": "https://raboteplay.blogspot.com/", "enlace_texto": "Ver RABOTE"
+    "funciones": [
+      "Tres juegos tradicionales",
+      "Personajes y jefes de la comunidad",
+      "Sin pay-to-win"
+    ],
+    "enlace": "https://raboteplay.blogspot.com/",
+    "enlace_texto": "Ver RABOTE"
   },
   {
-    "nombre": "NetworkedAPP", "estado": "Disponible", "tipo": "Estudio de aplicativos",
+    "nombre": "NetworkedAPP",
+    "estado": "Disponible",
+    "tipo": "Estudio de aplicativos",
     "descripcion": "La casa de mis aplicativos: herramientas que ayudan al ecosistema y conectan a la comunidad.",
-    "funciones": ["Catálogo de proyectos", "Novedades de cada app"],
-    "enlace": "https://networkedapp.github.io", "enlace_texto": "Visitar NetworkedAPP"
+    "funciones": [
+      "Catálogo de proyectos",
+      "Novedades de cada app"
+    ],
+    "enlace": "https://networkedapp.github.io",
+    "enlace_texto": "Visitar NetworkedAPP"
   }
 ]

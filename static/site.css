@@ -787,3 +787,16 @@ a.c-mod::after{content:"";}
 a.c-mod:hover{border-color:var(--acc2)}
 .c-more{display:block;text-align:right;font-weight:800;font-size:14px;color:var(--acc2);text-decoration:none;margin-top:4px}
 .lhead .lt{flex:1 1 180px}
+
+/* Bitácora Trader: entrar, aviso de live y únete al equipo */
+.nx-entrar{text-decoration:none;flex:none}
+@media(max-width:860px){.nx-entrar{padding:0 10px}}
+.nx-live{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#d92d20;color:#fff;text-decoration:none;font-size:14px;padding:9px 16px;text-align:center}
+.nx-live[hidden]{display:none}
+.nx-live .dot{width:10px;height:10px;border-radius:50%;background:#fff;animation:nxlive 1.2s infinite}
+.nx-live .t{opacity:.92}
+@keyframes nxlive{50%{opacity:.25}}
+.eq-list{margin:0;padding-left:20px;display:grid;gap:4px;color:var(--fg)}
+.eq-form{display:grid;gap:10px}
+.eq-form input,.eq-form select,.eq-form textarea{background:var(--bg);border:1px solid var(--line2);color:var(--fg);border-radius:16px;padding:13px 18px;font:inherit}
+.eq-form .btn{justify-self:start}
