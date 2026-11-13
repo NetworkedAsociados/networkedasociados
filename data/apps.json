@@ -1,5 +1,18 @@
 [
   {
+    "nombre": "Plantilla NRZ",
+    "estado": "Disponible",
+    "tipo": "Indicador MetaTrader 5",
+    "descripcion": "Networked Reaction Zones: zonas de entrada, salida si falla y objetivo para índices sintéticos y Forex, con panel y plan de riesgo.",
+    "funciones": [
+      "Entradas A, M, F y 2",
+      "Panel con calificación de 1 a 10",
+      "Licencia personal por cuenta MT5"
+    ],
+    "enlace": "/2026/11/plantilla-nrz.html",
+    "enlace_texto": "Descargar NRZ"
+  },
+  {
     "nombre": "Bitácora Trader",
     "estado": "Disponible",
     "tipo": "App Android y web",

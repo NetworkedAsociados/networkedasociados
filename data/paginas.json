@@ -102,5 +102,11 @@
   "seccion": "sobre",
   "categoria": "Experiencias reales",
   "descripcion": "John Hansen Silva Peña: fundador de NetworkedAsociados, profesional en Banca y Finanzas, trader y ajedrecista."
+ },
+ {
+  "ruta": "/2026/11/plantilla-nrz.html",
+  "seccion": "apps",
+  "categoria": "Herramientas y recursos",
+  "descripcion": "NRZ, la plantilla para MetaTrader 5 que marca zonas de entrada, salida y objetivo en PainX, GainX, Boom, Crash, Volatility y Forex. Descarga e instalación."
  }
 ]

@@ -232,6 +232,12 @@
   ],
   "herramientas": [
     {
+      "nombre": "Plantilla NRZ (MetaTrader 5)",
+      "descripcion": "La plantilla que usamos en las prácticas en vivo. Funciona con tu clave personal.",
+      "tipo": "Indicador",
+      "enlace": "/2026/11/plantilla-nrz.html"
+    },
+    {
       "nombre": "Plantilla de bitácora de trading",
       "descripcion": "Registra cada operación, tu emoción y lo que aprendiste.",
       "tipo": "Plantilla",

@@ -119,7 +119,7 @@ def block(x, b):
         rows = ''.join(f'<tr><td>{esc(l)}</td><td>{esc(r)}</td></tr>' for l, r in x['filas'])
         return f'<div class="a-vs"><table><thead><tr><th>{esc(x["t1"])}</th><th>{esc(x["t2"])}</th></tr></thead><tbody>{rows}</tbody></table></div>'
     if t == 'img':
-        return f'<figure class="a-img"><img src="{esc(x["src"])}" alt="{esc(x["alt"])}" loading="lazy" decoding="async">{f"<figcaption>{esc(x["pie"])}</figcaption>" if x["pie"] else ""}</figure>'
+        return f'<figure class="a-img"><img src="{esc(link(x["src"], b))}" alt="{esc(x["alt"])}" loading="lazy" decoding="async">{f"<figcaption>{esc(x["pie"])}</figcaption>" if x["pie"] else ""}</figure>'
     if t == 'chat':
         return '<div class="a-chat"><div class="bar"><span class="av">BN</span><div><b>BitacoraNetBot</b><small>bot · en línea</small></div></div><div class="msgs">' + ''.join(
             f'<p class="m {w}">{esc(s)}</p>' for w, s in x['lineas']) + '</div></div>'
