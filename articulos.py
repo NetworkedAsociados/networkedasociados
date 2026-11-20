@@ -626,6 +626,9 @@ A['/2026/11/plantilla-nrz.html'] = dict(
                   ('Pega la clave y opera', 'Arrastra NRZ a un gráfico M1, pega la clave en Parámetros → Licencia y Aceptar.')),
             Botones(('Descargar NRZ (MT5)', '/assets/nrz/NRZ_Indicator.ex5', 'b-acc'), ('Guía del estudiante (PDF)', '/assets/nrz/NRZ-Guia-del-Estudiante.pdf', 'b-ghost'),
                     ('Catálogo (PDF)', '/assets/nrz/NRZ-Catalogo.pdf', 'b-ghost')),
+            Nota('ok', 'Prueba gratis hasta el 30 de noviembre de 2026',
+                 'Usa esta clave en cualquier cuenta, incluso en demo: AAAAA-AAACB-6EFAA-AAAAA-AAAAA-XGF6Q-GQL · '
+                 'Pégala en Parámetros → Licencia → Clave de licencia. Se desactiva sola al terminar el 30 de noviembre.'),
             Nota('info', 'Sin clave no funciona', 'Puedes descargar el archivo, pero la plantilla solo se activa con una clave personal ligada a tu cuenta MT5. La clave incluye tu plan de riesgo y su vencimiento.')),
         cap('respaldo', 'Respaldo', 'Un respaldo que premia la disciplina',
             ProsContras(['Hiciste el mínimo de operaciones pactado', 'Respetaste tu riesgo por operación y por día', 'Tuviste menos de 3 faltas al plan'],
