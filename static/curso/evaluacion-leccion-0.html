@@ -1,0 +1,48 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Evaluación Lección 0 · Curso de índices sintéticos | NetworkedAsociados</title>
+<meta name="description" content="Evaluación de la lección 0 del curso gratuito de índices sintéticos de NetworkedAsociados.">
+<link rel="icon" href="../logo.png" type="image/png">
+<style>body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 20%,#0D2A63 0%,#061A40 45%,#020816 100%);padding:24px 14px}.top{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;font-family:'Segoe UI',Arial,sans-serif}.top a{color:#9FD4FF;text-decoration:none;font-weight:700}.top img{width:44px}</style>
+</head><body><div class="top"><a href="../../curso/"><img src="../logo.png" alt="NetworkedAsociados"></a><a href="../../curso/#l0">← Volver al curso</a></div>
+<div id="nw-eval" style="font-family:'Segoe UI',Arial,sans-serif;max-width:760px;margin:20px auto;background:#061A40;border-radius:18px;padding:28px 26px;color:#fff;border:1px solid rgba(120,190,255,.45);box-shadow:0 0 40px rgba(61,169,255,.2)">
+<style>
+#nw-eval h2{margin:0 0 4px;font-size:26px;color:#fff}#nw-eval h2 span{color:#3DA9FF}
+#nw-eval .sub{color:#C0C7D1;margin:0 0 18px;font-size:15px}
+#nw-eval .q{background:rgba(255,255,255,.05);border:1px solid rgba(120,190,255,.25);border-radius:12px;padding:14px 16px;margin:12px 0}
+#nw-eval .q p{margin:0 0 8px;font-weight:700}
+#nw-eval label{display:block;padding:7px 10px;margin:4px 0;border-radius:8px;cursor:pointer;color:#E6ECF5}
+#nw-eval label:hover{background:rgba(61,169,255,.12)}
+#nw-eval input{margin-right:8px;accent-color:#3DA9FF}
+#nw-eval .ok{background:rgba(40,180,110,.25)!important;border:1px solid rgba(40,180,110,.7)}
+#nw-eval .bad{background:rgba(220,60,70,.22)!important;border:1px solid rgba(220,60,70,.6)}
+#nw-eval .exp{display:none;color:#9FD4FF;font-size:14px;margin-top:6px}
+#nw-eval button{background:linear-gradient(180deg,#3DA9FF,#0A5CFF);color:#fff;border:0;border-radius:30px;padding:13px 30px;font-size:16px;font-weight:700;cursor:pointer;margin-top:14px}
+#nw-eval #nw-res{margin-top:16px;font-size:18px;font-weight:700}
+</style>
+<h2>Evaluación · <span>Lección 0</span></h2>
+<p class="sub">Curso gratuito de índices sintéticos · 10 preguntas · Necesitas 7 aciertos para pasar a la Lección 1.</p>
+<div id="nw-qs"></div>
+<button type="button" onclick="nwCheck()">Calificar</button>
+<button type="button" onclick="nwReset()" style="background:transparent;border:1.5px solid #3DA9FF;margin-left:8px">Intentar de nuevo</button>
+<div id="nw-res"></div>
+<p class="sub" style="margin-top:18px;font-size:13px">Contenido educativo. No es asesoría financiera. El trading tiene riesgo real de pérdida.</p>
+<script>
+var NWQ=[
+["¿Cuántas lecciones y módulos tiene el curso?",["10 lecciones y 5 módulos","20 lecciones y 10 módulos","30 lecciones y 12 módulos"],1,"Son 20 lecciones organizadas en 10 módulos."],
+["¿Qué tres componentes tiene cada lección?",["Video, material de ayuda en PDF y evaluación","Video, transmisión en vivo y examen pago","Solo un video"],0,"Cada lección trae video explicativo, PDF de ayuda y evaluación."],
+["¿Cuánto cuesta el curso completo?",["Es gratis, pero la parte 2 se paga","Es gratis la primera mitad","Es completamente gratis, sin registro y sin letra pequeña"],2,"No habrá parte 2 ni curso avanzado de pago."],
+["¿Cuál es la principal diferencia de los índices sintéticos frente al forex, las acciones o las criptomonedas?",["Solo se pueden operar los fines de semana","Su precio se genera con un algoritmo aleatorio y no depende de noticias ni economías reales","Siempre suben de precio"],1,"Los sintéticos son mercados simulados con un generador aleatorio auditado."],
+["¿Qué es un spike?",["Un salto brusco del precio en una sola vela","Una comisión del broker","Un tipo de cuenta de fondeo"],0,"Es típico de Boom, Crash, PainX y GainX."],
+["En el índice Boom, ¿hacia dónde son los spikes?",["Hacia abajo","Hacia los lados","Hacia arriba"],2,"Boom: saltos hacia arriba. Crash: saltos hacia abajo."],
+["¿Para qué sirve el stop loss?",["Para abrir más operaciones","Para cerrar automáticamente la operación si el precio va en tu contra hasta un punto definido","Para duplicar la ganancia"],1,"Lo defines antes de entrar para limitar la pérdida."],
+["Según John, ¿qué módulo decide si duras en esto o te quemas en un mes?",["Gestión del riesgo","Configurar MetaTrader 5","Crear tu cuenta"],0,"Es el módulo que no te puedes perder."],
+["Completa la idea que John aprendió enseñando ajedrez: “No ganas por hacer siempre las jugadas más brillantes, sino…”",["…por arriesgar más que los demás","…por operar todos los días","…por no cometer graves errores"],2,"En el trading aplica igualito."],
+["¿Cuál de estas afirmaciones es correcta?",["El curso garantiza ganancias","Es contenido educativo, no asesoría financiera, y en el trading se puede perder dinero","Con ver los videos basta para aprender"],1,"Nadie honesto puede garantizar ganancias."]
+];
+function nwRender(){var h="";NWQ.forEach(function(q,i){h+='<div class="q" id="nwq'+i+'"><p>'+(i+1)+'. '+q[0]+'</p>';q[1].forEach(function(o,j){h+='<label id="nwl'+i+'_'+j+'"><input type="radio" name="nwq'+i+'" value="'+j+'">'+o+'</label>';});h+='<div class="exp" id="nwe'+i+'">'+q[3]+'</div></div>';});document.getElementById("nw-qs").innerHTML=h;}
+function nwCheck(){var ok=0;NWQ.forEach(function(q,i){var s=document.querySelector('input[name="nwq'+i+'"]:checked');q[1].forEach(function(o,j){document.getElementById("nwl"+i+"_"+j).className="";});document.getElementById("nwl"+i+"_"+q[2]).className="ok";if(s&&+s.value===q[2])ok++;else if(s)document.getElementById("nwl"+i+"_"+s.value).className="bad";document.getElementById("nwe"+i).style.display="block";});var r=document.getElementById("nw-res");r.innerHTML=ok>=7?"✅ "+ok+"/10 · ¡Aprobaste! Ya puedes pasar a la Lección 1.":"📘 "+ok+"/10 · Repasa el video y el PDF e inténtalo de nuevo (necesitas 7).";r.style.color=ok>=7?"#5BE39A":"#9FD4FF";}
+function nwReset(){nwRender();document.getElementById("nw-res").innerHTML="";}
+nwRender();
+</script>
+</div>
+</body></html>

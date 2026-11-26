@@ -14,6 +14,14 @@
       "titulo": "Introducción a los Índices Sintéticos",
       "lecciones": [
         {
+          "numero": "0",
+          "titulo": "Introducción: cómo funciona el curso",
+          "duracion": "7 min",
+          "video": "",
+          "pdf": "leccion-0-introduccion.pdf",
+          "evaluacion": "evaluacion-leccion-0.html"
+        },
+        {
           "numero": "1.1",
           "titulo": "¿Qué son los índices sintéticos y cómo funcionan?",
           "duracion": "10-12 min",
