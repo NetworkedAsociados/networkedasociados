@@ -24,10 +24,10 @@
         {
           "numero": "1.1",
           "titulo": "¿Qué son los índices sintéticos y cómo funcionan?",
-          "duracion": "10-12 min",
+          "duracion": "16 min",
           "video": "",
-          "pdf": "",
-          "evaluacion": ""
+          "pdf": "leccion-1-1-indices-sinteticos.pdf",
+          "evaluacion": "evaluacion-leccion-1-1.html"
         },
         {
           "numero": "1.2",
